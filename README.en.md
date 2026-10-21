@@ -16,6 +16,7 @@ English | [中文](README.md)
 
 - [Start with these 3](#start-with-these-3)
 - [omp in 30 seconds](#omp-in-30-seconds)
+- [Get started in 3 minutes](#get-started-in-3-minutes)
 - [Featured](#featured)
 - [Common misconceptions](#common-misconceptions)
 - [Go deeper](#go-deeper)
@@ -37,6 +38,28 @@ English | [中文](README.md)
 1. **Pi is a minimal core; omp is batteries included.** Both are extensible, but omp ships LSP, debuggers, a browser, subagents and a plugin marketplace.
 2. **It bets on the harness, not the model.** The author argues that the same model succeeds far more often with better edit formats and tools ([why.md](docs/why.md)).
 3. **Its ecosystem partly overlaps with Pi.** Pi packages often install, but directories and API versions differ; verify each one ([compat matrix](docs/pi-compat.md)).
+
+## Get started in 3 minutes
+
+```sh
+# 1. Install (pick one). The official README marks Bun as recommended; needs bun >= 1.3.14
+bun install -g @oh-my-pi/pi-coding-agent
+curl -fsSL https://omp.sh/install | sh      # macOS / Linux
+brew install can1357/tap/omp
+
+# 2. Pick a model: log in to a provider from the terminal (/login inside the TUI)
+omp login
+#    or define a custom or local provider in ~/.omp/agent/models.yml
+
+# 3. Start
+omp
+```
+
+- Without a default model omp exits immediately ("No default model selected"). That is expected, not a failed install.
+- Windows (`irm https://omp.sh/install.ps1 | iex`), Nix, mise and Alpine: see [practice.md](docs/practice.md#安装) (Chinese).
+- To try it without a real account: `sh examples/run.sh 18.12.5` installs omp into a temporary HOME, starts it with a fake provider and reads the command and tool lists, without calling any model ([RUNLOG](examples/RUNLOG.md)).
+
+Commands checked against the official [README · Install](https://github.com/can1357/oh-my-pi/blob/main/README.md#install) and [cli-reference.md](https://github.com/can1357/oh-my-pi/blob/main/docs/cli-reference.md) on 2026-10-21, v18.12.5 (verified).
 
 ## Featured
 

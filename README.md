@@ -16,6 +16,7 @@
 
 - [只看 3 条](#只看-3-条)
 - [30 秒看懂 omp](#30-秒看懂-omp)
+- [3 分钟上手](#3-分钟上手)
 - [精选](#精选)
 - [常见误解](#常见误解)
 - [深入阅读](#深入阅读)
@@ -48,6 +49,28 @@ flowchart LR
 1. **Pi 是极简内核，omp 是全家桶。** 同样能写扩展，但 omp 自带 LSP、调试器、浏览器、子 agent、插件市场。
 2. **它押注 harness 而不是模型。** 作者的论点：同一个模型，换编辑格式和工具设计，成功率会差很多（[why.md](docs/why.md)）。
 3. **生态和 Pi 部分互通。** Pi 包常常能装上，但目录、API 版本不同，要逐个验证（[兼容矩阵](docs/pi-compat.md)）。
+
+## 3 分钟上手
+
+```sh
+# 1. 安装（任选一种）。官方 README 把 Bun 标为 recommended，要求 bun ≥ 1.3.14
+bun install -g @oh-my-pi/pi-coding-agent
+curl -fsSL https://omp.sh/install | sh      # macOS / Linux
+brew install can1357/tap/omp
+
+# 2. 选一个模型：在终端里登录 provider（TUI 里对应 /login）
+omp login
+#    也可以在 ~/.omp/agent/models.yml 里写自定义或本地 provider
+
+# 3. 启动
+omp
+```
+
+- 没有默认模型时 omp 会直接退出（「No default model selected」），这是正常行为，不是安装失败。
+- Windows（`irm https://omp.sh/install.ps1 | iex`）、Nix、mise、Alpine 的装法见 [practice.md](docs/practice.md#安装)。
+- 不想动真实账号：`sh examples/run.sh 18.12.5` 会在临时 HOME 里装好 omp，用一个假 provider 读出命令和工具列表，不调用任何模型（[RUNLOG](examples/RUNLOG.md)）。
+
+命令核对自官方 [README · Install](https://github.com/can1357/oh-my-pi/blob/main/README.md#install) 和 [cli-reference.md](https://github.com/can1357/oh-my-pi/blob/main/docs/cli-reference.md)，2026-10-21，对应 v18.12.5（已验证）。
 
 ## 精选
 
