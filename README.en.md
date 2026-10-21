@@ -7,6 +7,9 @@ English | [中文](README.md)
 **What omp is**: a terminal AI coding agent forked from [Pi](https://github.com/earendil-works/pi) that wires LSP, debuggers, structural editing and many tools into the agent.
 **Not**: oh-my-posh (its themes are `*.omp.json`), the npm package `oh-my-pi`, or OpenMP.
 
+> [!WARNING]
+> **Before you open an untrusted repo.** By design omp loads the project's settings, extensions, hooks, tools, commands, skills, rules and project MCP config, and extensions are arbitrary code running on your machine. Use `--no-extensions` to skip extension discovery, `--trusted-extension /absolute/path.ts` to allow only one extension, and `--config <file>` to turn off the project `.mcp.json`. ([official README, "Project inputs and trust"](https://github.com/can1357/oh-my-pi/blob/main/README.md#project-inputs-and-trust), checked 2026-10-21; more in [trust and safety](docs/practice.md#信任与安全))
+
 <!-- BEGIN GENERATED: stats -->380 entries in 16 categories · 20 featured · 9 misconceptions · 10 compat rows · 9 official, 351 declare omp support, 1 Pi packages load-tested on omp. Metrics fetched 2026-10-21 11:59 (UTC+8).<!-- END GENERATED: stats -->
 
 ## Contents

@@ -7,6 +7,9 @@
 **omp 是什么**：一个终端里的 AI coding agent，从 [Pi](https://github.com/earendil-works/pi) 分叉而来，把 LSP、调试器、语法级编辑和大量工具直接接进 agent。
 **不是**：oh-my-posh（它的主题文件叫 `*.omp.json`）、npm 上的 `oh-my-pi` 包、OpenMP。
 
+> [!WARNING]
+> **打开陌生仓库前先看这里。** omp 按设计会加载项目里的 settings、extensions、hooks、tools、commands、skills、rules 和项目 MCP 配置，扩展是在你机器上运行的任意代码。用 `--no-extensions` 跳过扩展自动发现，用 `--trusted-extension /绝对路径.ts` 只放行指定扩展，用 `--config <file>` 关掉项目 `.mcp.json`。（[官方 README「Project inputs and trust」](https://github.com/can1357/oh-my-pi/blob/main/README.md#project-inputs-and-trust)，核实于 2026-10-21；详见 [信任与安全](docs/practice.md#信任与安全)）
+
 <!-- BEGIN GENERATED: stats -->共 380 条，16 个分类；精选 20 条；常见误解 9 条；兼容矩阵 10 行。其中 omp 官方 9 条，项目声明支持 omp 351 条，Pi 包在 omp 实测加载 1 条。指标抓取于 2026-10-21 11:59（Asia/Shanghai）。<!-- END GENERATED: stats -->
 
 ## 目录
