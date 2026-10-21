@@ -17,6 +17,7 @@ English | [中文](README.md)
 - [Start with these 3](#start-with-these-3)
 - [omp in 30 seconds](#omp-in-30-seconds)
 - [Get started in 3 minutes](#get-started-in-3-minutes)
+- [Core mechanisms at a glance](#core-mechanisms-at-a-glance)
 - [Featured](#featured)
 - [Common misconceptions](#common-misconceptions)
 - [Go deeper](#go-deeper)
@@ -60,6 +61,54 @@ omp
 - To try it without a real account: `sh examples/run.sh 18.12.5` installs omp into a temporary HOME, starts it with a fake provider and reads the command and tool lists, without calling any model ([RUNLOG](examples/RUNLOG.md)).
 
 Commands checked against the official [README · Install](https://github.com/can1357/oh-my-pi/blob/main/README.md#install) and [cli-reference.md](https://github.com/can1357/oh-my-pi/blob/main/docs/cli-reference.md) on 2026-10-21, v18.12.5 (verified).
+
+## Core mechanisms at a glance
+
+Five mechanisms set omp apart from other coding agents. Each is labelled with its evidence type; details and source paths are in the [deep-dive](docs/deep-dive.md) (Chinese).
+
+### 1. hashline: edit by content hash
+
+- **Problem**: `apply_patch` needs a correct diff and `str_replace` needs the old text reproduced exactly; one wrong character breaks the file.
+- **How**: every line read comes with a 2–3 character content hash, and edits reference `line:hash` anchors. If the file has changed, the hash no longer matches and the edit is rejected before it is written.
+- **Evidence**: the mechanism is visible in `crates/pi-edit` (verified). The gain comes from the author's own benchmark: 14 of 16 models beat patch (self-claimed). An HN user reports that repairing broken anchors costs extra turns. → [deep-dive §3.1](docs/deep-dive.md#31-hashline按内容哈希编辑)
+
+```mermaid
+sequenceDiagram
+  participant M as Model
+  participant H as omp
+  M->>H: read hello.js
+  H-->>M: 2:f1 #124;  return "world"
+  M->>H: edit 2:f1
+  alt hash still f1
+    H-->>M: written
+  else file changed
+    H-->>M: rejected, read again
+  end
+```
+
+### 2. TTSR: rules injected only when the output matches
+
+- **Problem**: rules in the system prompt cost context on every turn.
+- **How**: rules stay out of the context. When the streamed output matches a rule's regex, omp aborts the request, injects the rule as a system reminder and retries from the same point.
+- **Evidence**: official docs and `session/ttsr-coordinator.ts` (verified); "injections survive compaction" is self-claimed in the README; the cost is an extra request, and over-broad rules interrupt often (inferred). → [deep-dive §3.2](docs/deep-dive.md#32-ttsr时间旅行的流式规则)
+
+### 3. Subagents (the task tool)
+
+- **Problem**: one context for a big task gets messy.
+- **How**: the `task` tool spawns subagents, each in an isolated worktree, returning schema-validated results; the parent reads fields by path through internal `agent://<id>/...` URLs. Agent definitions come from bundled, user and project sources, with a spawn-depth limit.
+- **Evidence**: official task-agent-discovery.md and `src/task/` (verified); worktree isolation and structured results per the README (self-claimed). → [deep-dive §3.3](docs/deep-dive.md#33-子-agenttask)
+
+### 4. LSP and debuggers wired into the agent
+
+- **Problem**: agents miss references when renaming or refactoring, and can only guess at crashes.
+- **How**: file writes go through LSP (for example `workspace/willRenameFiles`), so re-exports and aliases move too; for debugging the agent attaches lldb, dlv or debugpy, steps and inspects frames.
+- **Evidence**: README §02 and §03 (self-claimed); lsp-config.md and `src/dap/` are visible (verified). → [deep-dive §2](docs/deep-dive.md#2-有什么用场景)
+
+### 5. Extensions, the plugin marketplace and Pi compatibility
+
+- **Problem**: built-ins are never enough, and teams often already have Claude Code or Pi plugins and rules.
+- **How**: an extension is a TS/JS module whose default export is a factory that registers tools, commands, events and UI; the marketplace reads the Claude Code plugin format; a compat layer aliases Pi package imports to omp's own packages. On first run omp also reads existing rules, skills and MCP from 8 directories such as `.claude`, `.cursor` and `.codex`.
+- **Evidence**: extensions.md, marketplace.md, legacy-pi-compat.ts (verified); in our offline tests a minimal extension, a minimal marketplace and the Pi package pi-web-access all load (tested); "8 directories" is self-claimed in the README. → [deep-dive §3.4](docs/deep-dive.md#34-扩展-api-与插件), [compat matrix](docs/pi-compat.md)
 
 ## Featured
 

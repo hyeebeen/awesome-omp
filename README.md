@@ -17,6 +17,7 @@
 - [只看 3 条](#只看-3-条)
 - [30 秒看懂 omp](#30-秒看懂-omp)
 - [3 分钟上手](#3-分钟上手)
+- [核心机制一览](#核心机制一览)
 - [精选](#精选)
 - [常见误解](#常见误解)
 - [深入阅读](#深入阅读)
@@ -71,6 +72,54 @@ omp
 - 不想动真实账号：`sh examples/run.sh 18.12.5` 会在临时 HOME 里装好 omp，用一个假 provider 读出命令和工具列表，不调用任何模型（[RUNLOG](examples/RUNLOG.md)）。
 
 命令核对自官方 [README · Install](https://github.com/can1357/oh-my-pi/blob/main/README.md#install) 和 [cli-reference.md](https://github.com/can1357/oh-my-pi/blob/main/docs/cli-reference.md)，2026-10-21，对应 v18.12.5（已验证）。
+
+## 核心机制一览
+
+omp 和其他 coding agent 的差别主要在这五个机制。每条都标了证据类型，细节和源码路径见 [deep-dive](docs/deep-dive.md)。
+
+### 1. hashline：按内容哈希编辑
+
+- **解决什么**：`apply_patch` 要模型写对 diff 格式，`str_replace` 要模型逐字复述旧文本，复述错一个字符就会改坏文件。
+- **怎么做**：读文件时每行带一个 2–3 字符的内容哈希，编辑时只引用「行号:哈希」。文件如果已经变了，哈希对不上，编辑会在写入前被拒绝。
+- **证据**：机制在源码 `crates/pi-edit` 里可见（已验证）。效果来自作者自己的基准：16 个模型中 14 个优于 patch（自述）。HN 上也有用户反馈，修复坏掉的锚点要多花轮次。→ [deep-dive §3.1](docs/deep-dive.md#31-hashline按内容哈希编辑)
+
+```mermaid
+sequenceDiagram
+  participant M as 模型
+  participant H as omp
+  M->>H: read hello.js
+  H-->>M: 2:f1 #124;  return "world"
+  M->>H: 改 2:f1
+  alt 哈希仍是 f1
+    H-->>M: 已写入
+  else 文件已被改动
+    H-->>M: 拒绝，请重新读取
+  end
+```
+
+### 2. TTSR：输出命中才注入的规则
+
+- **解决什么**：规则写进系统提示词，每一轮都要占上下文。
+- **怎么做**：规则平时不进上下文。模型流式输出一旦命中某条规则的正则，omp 就中断这次请求，把规则作为系统提醒注入，再从同一位置重试。
+- **证据**：官方文档和源码 `session/ttsr-coordinator.ts`（已验证）；「注入在压缩后保留」是 README 自述；代价是多一次请求，规则写得太宽会频繁打断（推断）。→ [deep-dive §3.2](docs/deep-dive.md#32-ttsr时间旅行的流式规则)
+
+### 3. 子 agent（task 工具）
+
+- **解决什么**：大任务都塞进一个上下文，会越跑越乱。
+- **怎么做**：`task` 工具派生子 agent，各自在隔离的 worktree 里工作，返回经过 schema 校验的结果；父 agent 用 `agent://<id>/...` 内部 URL 按路径取字段。agent 定义来自内置、用户、项目三处，有 spawn 深度限制。
+- **证据**：官方 task-agent-discovery.md 和 `src/task/` 源码（已验证）；worktree 隔离与结构化结果来自 README（自述）。→ [deep-dive §3.3](docs/deep-dive.md#33-子-agenttask)
+
+### 4. LSP 与调试器直接接进 agent
+
+- **解决什么**：agent 改名、重构时漏改引用；遇到崩溃只能猜。
+- **怎么做**：写文件时走 LSP（例如 `workspace/willRenameFiles`），re-export 和别名一起改；调试时 agent 直接挂 lldb、dlv、debugpy，单步执行、查看栈帧。
+- **证据**：README §02、§03（自述）；lsp-config.md 和 `src/dap/` 源码可见（已验证）。→ [deep-dive §2](docs/deep-dive.md#2-有什么用场景)
+
+### 5. 扩展、插件市场与 Pi 兼容
+
+- **解决什么**：内置功能总有不够用的时候，团队手里往往也已经有 Claude Code 或 Pi 的插件和规则。
+- **怎么做**：扩展是一个默认导出工厂函数的 TS/JS 模块，可以注册工具、命令、事件和 UI；插件市场直接兼容 Claude Code 插件格式；兼容层把 Pi 的包名导入别名到 omp 自己的包。首次运行还会读取 `.claude`、`.cursor`、`.codex` 等 8 种目录里已有的规则、skills 和 MCP。
+- **证据**：extensions.md、marketplace.md、legacy-pi-compat.ts（已验证）；本仓库离线实测，最小扩展、最小插件市场和 Pi 包 pi-web-access 都能加载（实测）；「8 种目录」是 README 自述。→ [deep-dive §3.4](docs/deep-dive.md#34-扩展-api-与插件)、[兼容矩阵](docs/pi-compat.md)
 
 ## 精选
 
