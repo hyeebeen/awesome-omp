@@ -24,7 +24,7 @@
 ## 只看 3 条
 
 <!-- BEGIN GENERATED: top3 -->
-1. **[omp (can1357/oh-my-pi)](https://github.com/can1357/oh-my-pi)**：一切的源头。README 用 21 节讲清卖点（LSP、调试器、TTSR、子 agent、hashline），docs/ 有约 85 篇机制文档，比任何二手介绍都准。
+1. **[omp (can1357/oh-my-pi)](https://github.com/can1357/oh-my-pi)**：一切的源头。README 用 21 节讲清卖点（LSP、调试器、TTSR、子 agent、hashline），docs/ 顶层有 82 篇文档（2026-10-21 主分支），比任何二手介绍都准。
 2. **[The harness problem（作者博客）](https://blog.can.ac/2026/02/12/the-harness-problem/)**：读懂 omp 为什么存在：作者认为瓶颈常在 harness 而不是模型，只换编辑格式（hashline）就让多数模型通过率上升。数字是自述基准，配合「常见误解」看。
 3. **[The Harness Playbook（Stencil 博客）](https://stencil.so/blog/harness-playbook)**：作者亲自复盘 omp 哪里做错了，并公布替代架构 omp²（扩展改用 Python）。想在 omp 上长期投入扩展开发，先读这篇。
 <!-- END GENERATED: top3 -->
@@ -53,7 +53,7 @@ flowchart LR
 <!-- BEGIN GENERATED: featured -->
 | # | 条目 | 分类 | 为什么值得看 | 数据 |
 |---|---|---|---|---|
-| 1 | [omp (can1357/oh-my-pi)](https://github.com/can1357/oh-my-pi) | omp 本体 | 一切的源头。README 用 21 节讲清卖点（LSP、调试器、TTSR、子 agent、hashline），docs/ 有约 85 篇机制文档，比任何二手介绍都准。 | [详情](docs/ecosystem.md#oh-my-pi) |
+| 1 | [omp (can1357/oh-my-pi)](https://github.com/can1357/oh-my-pi) | omp 本体 | 一切的源头。README 用 21 节讲清卖点（LSP、调试器、TTSR、子 agent、hashline），docs/ 顶层有 82 篇文档（2026-10-21 主分支），比任何二手介绍都准。 | [详情](docs/ecosystem.md#oh-my-pi) |
 | 2 | [The harness problem（作者博客）](https://blog.can.ac/2026/02/12/the-harness-problem/) | 文章 / 教程 / 讨论 | 读懂 omp 为什么存在：作者认为瓶颈常在 harness 而不是模型，只换编辑格式（hashline）就让多数模型通过率上升。数字是自述基准，配合「常见误解」看。 | [详情](docs/ecosystem.md#the-harness-problem) |
 | 3 | [The Harness Playbook（Stencil 博客）](https://stencil.so/blog/harness-playbook) | 文章 / 教程 / 讨论 | 作者亲自复盘 omp 哪里做错了，并公布替代架构 omp²（扩展改用 Python）。想在 omp 上长期投入扩展开发，先读这篇。 | [详情](docs/ecosystem.md#harness-playbook) |
 | 4 | [omp 文档：Extensions + Extension loading](https://github.com/can1357/oh-my-pi/blob/main/docs/extensions.md) | 官方文档导读 | 写扩展的唯一权威：工厂函数、事件、工具、斜杠命令、UI，以及从哪些目录发现扩展。本仓库的最小扩展照它写成并实测可加载。 | [详情](docs/ecosystem.md#docs-extensions) |
@@ -63,7 +63,7 @@ flowchart LR
 | 8 | [Hacker News：Oh-my-pi – A coding agent with the IDE wired in](https://news.ycombinator.com/item?id=48994611) | 文章 / 教程 / 讨论 | 真实用户的正反声音：上手快、搜索集成好；也有人担心用订阅账号走 OAuth 会被封、质疑跑分。 | [详情](docs/ecosystem.md#hn-launch) |
 | 9 | [Custom Models in Oh My Pi（doug.sh）](https://doug.sh/posts/oh-my-pi-custom-models/) | 模型与 provider | 跑本地模型最实用的一篇：各推理服务的 models.yml 可用配置、模型角色和白名单，并注明 omp 18.2.7 之后要改的两处。 | [详情](docs/ecosystem.md#doug-custom-models) |
 | 10 | [pi-web-access](https://github.com/nicobailon/pi-web-access) | 扩展 | Pi 包在 omp 上能用的实证：装上即有 web_search，但需要 Pi 0.86+ 的动态激活功能自动关闭。拿它当「搬 Pi 包」的参照。 | [详情](docs/ecosystem.md#pi-web-access) |
-| 11 | [Magic Context（cortexkit）](https://github.com/cortexkit/magic-context) | 记忆与上下文 | 跨会话记忆和上下文管理，安装时自动识别 omp 并替换其内置压缩。适合长会话用户，也是理解 omp 压缩可替换的例子。 | [详情](docs/ecosystem.md#magic-context) |
+| 11 | [Magic Context（cortexkit）](https://github.com/cortexkit/magic-context) | 记忆与上下文 | 跨会话记忆和上下文管理，安装时自动识别 omp，注册插件并关闭 omp 内置压缩。适合长会话用户，也说明 omp 的压缩可以被替换。 | [详情](docs/ecosystem.md#magic-context) |
 | 12 | [gooey-pi](https://github.com/am-will/gooey-pi) | 桌面 / Web / 移动前端 | 不想用 TUI 时最受关注的桌面前端之一（Electron，跨平台），同时支持 Pi 和 omp。 | [详情](docs/ecosystem.md#gooey-pi) |
 | 13 | [pi-automode](https://github.com/czottmann/pi-automode) | 工作流与多 agent | 给 omp 加类似 Claude Code 的自动审批模式，由一个可选模型判断哪些操作可放行。权限和效率之间的折中，值得对照 omp 自带的 approval-mode 一起看。 | [详情](docs/ecosystem.md#pi-automode) |
 | 14 | [anthropics/claude-plugins-official](https://github.com/anthropics/claude-plugins-official) | 插件市场源 | omp 文档官方示例里的插件市场源。一条命令就能把 Claude Code 生态的插件接进 omp，但插件内容是否全部可用要自己验证。 | [详情](docs/ecosystem.md#claude-plugins-official) |

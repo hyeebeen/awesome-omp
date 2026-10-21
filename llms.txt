@@ -21,7 +21,7 @@ Counts: 380 entries, 20 featured, 9 misconceptions, 10 Pi-vs-omp compat rows. Me
 
 ## Featured
 
-- [omp (can1357/oh-my-pi)](https://github.com/can1357/oh-my-pi): The source. The README walks through 21 features and docs/ holds about 85 mechanism docs, more accurate than any second-hand intro.
+- [omp (can1357/oh-my-pi)](https://github.com/can1357/oh-my-pi): The source. The README walks through 21 features and docs/ holds 82 top-level docs (main, 2026-10-21), more accurate than any second-hand intro.
 - [The harness problem（作者博客）](https://blog.can.ac/2026/02/12/the-harness-problem/): Why omp exists: the author argues the harness, not the model, is often the bottleneck; changing only the edit format (hashline) lifted most models. Self-reported benchmark.
 - [The Harness Playbook（Stencil 博客）](https://stencil.so/blog/harness-playbook): The author's own postmortem of omp and the plan for omp² (Python extensions). Read before investing in omp extensions.
 - [omp 文档：Extensions + Extension loading](https://github.com/can1357/oh-my-pi/blob/main/docs/extensions.md): The authority on writing extensions: factory, events, tools, slash commands, UI, and discovery paths. Our minimal extension follows it and loads in tests.
@@ -31,7 +31,7 @@ Counts: 380 entries, 20 featured, 9 misconceptions, 10 Pi-vs-omp compat rows. Me
 - [Hacker News：Oh-my-pi – A coding agent with the IDE wired in](https://news.ycombinator.com/item?id=48994611): Real user voices: easy start and good search integration, but also worries about subscription OAuth bans and doubts about benchmarks.
 - [Custom Models in Oh My Pi（doug.sh）](https://doug.sh/posts/oh-my-pi-custom-models/): Most practical guide to local models: working models.yml for each inference server, model roles and allowlists, plus two changes needed since omp 18.2.7.
 - [pi-web-access](https://github.com/nicobailon/pi-web-access): Evidence that Pi packages can work on omp: installs and exposes web_search, but a feature needing Pi 0.86+ is disabled. A reference for porting Pi packages.
-- [Magic Context（cortexkit）](https://github.com/cortexkit/magic-context): Cross-session memory and context management that detects omp and replaces its built-in compaction. Good for long sessions.
+- [Magic Context（cortexkit）](https://github.com/cortexkit/magic-context): Cross-session memory and context management that detects omp, registers itself and turns off the built-in compaction. Good for long sessions.
 - [gooey-pi](https://github.com/am-will/gooey-pi): One of the most-starred desktop frontends (Electron, cross-platform) for people who prefer a GUI; supports both Pi and omp.
 - [pi-automode](https://github.com/czottmann/pi-automode): Adds a Claude-Code-style auto mode: a chosen model decides which actions can proceed. Compare with omp's own approval-mode.
 - [anthropics/claude-plugins-official](https://github.com/anthropics/claude-plugins-official): The marketplace used in omp's own quick start. One command brings Claude Code plugins into omp; verify each plugin yourself.

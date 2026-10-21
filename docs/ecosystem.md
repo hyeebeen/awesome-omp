@@ -30,7 +30,7 @@
 
 | 名称 | 说明 | omp 支持 | 证据 | 指标 | 核实 |
 |---|---|---|---|---|---|
-| <a id="oh-my-pi"></a>[omp (can1357/oh-my-pi)](https://github.com/can1357/oh-my-pi) ⭐ | 一切的源头。README 用 21 节讲清卖点（LSP、调试器、TTSR、子 agent、hashline），docs/ 有约 85 篇机制文档，比任何二手介绍都准。 | omp 官方 | 已验证：官方仓库；npm 包 bin 名为 omp，README 写明 Fork of Pi [1](https://github.com/can1357/oh-my-pi) [2](https://github.com/can1357/oh-my-pi/blob/main/packages/coding-agent/package.json) | ★36,071 ⬇854,265/月 | 2026-10-21 |
+| <a id="oh-my-pi"></a>[omp (can1357/oh-my-pi)](https://github.com/can1357/oh-my-pi) ⭐ | 一切的源头。README 用 21 节讲清卖点（LSP、调试器、TTSR、子 agent、hashline），docs/ 顶层有 82 篇文档（2026-10-21 主分支），比任何二手介绍都准。 | omp 官方 | 已验证：官方仓库；npm 包 bin 名为 omp，README 写明 Fork of Pi [1](https://github.com/can1357/oh-my-pi) [2](https://github.com/can1357/oh-my-pi/blob/main/packages/coding-agent/package.json) | ★36,071 ⬇854,265/月 | 2026-10-21 |
 | <a id="omp-sh"></a>[omp.sh（官网）](https://omp.sh) |  | omp 官方 | 已验证：repo homepage 字段；页面 title「omp — a coding agent with the IDE wired in」 [1](https://omp.sh) | — | 2026-10-21 |
 
 <a id="cat-doc"></a>
@@ -311,7 +311,7 @@
 
 | 名称 | 说明 | omp 支持 | 证据 | 指标 | 核实 |
 |---|---|---|---|---|---|
-| <a id="magic-context"></a>[Magic Context（cortexkit）](https://github.com/cortexkit/magic-context) ⭐ | 跨会话记忆和上下文管理，安装时自动识别 omp 并替换其内置压缩。适合长会话用户，也是理解 omp 压缩可替换的例子。 | 项目声明支持 omp | 自述：README: auto-detects which harnesses you have installed (OpenCode, Pi, OMP...) and configures each one [1](https://github.com/cortexkit/magic-context) | ★2,366 ⬇11,456/月 | 2026-10-21 |
+| <a id="magic-context"></a>[Magic Context（cortexkit）](https://github.com/cortexkit/magic-context) ⭐ | 跨会话记忆和上下文管理，安装时自动识别 omp，注册插件并关闭 omp 内置压缩。适合长会话用户，也说明 omp 的压缩可以被替换。 | 项目声明支持 omp | 自述：README: auto-detects which harnesses you have installed (OpenCode, Pi, OMP...) and configures each one [1](https://github.com/cortexkit/magic-context) | ★2,366 ⬇11,456/月 | 2026-10-21 |
 | <a id="memorix"></a>[memorix](https://github.com/AVIDS2/memorix) | Open-source cross-agent memory layer for coding agents via MCP. | 项目声明支持 omp | 自述：description: Compatible with ... Oh-my-Pi, Pi ... [1](https://github.com/AVIDS2/memorix) | ★853 | 2026-10-21 |
 | <a id="nowledge-mem-omp"></a>[nowledge-mem-omp](https://www.npmjs.com/package/nowledge-mem-omp) | Cross-tool memory for OMP. Inject Nowledge Mem context, sync OMP threads, and save what matters. | 项目声明支持 omp | 自述：npm description: Cross-tool memory for OMP. Inject Nowledge Mem context, sync OMP threads, and save what matters. omp-plugin oh-my-pi memory nowledge [1](https://www.npmjs.com/package/nowledge-mem-omp) [2](https://github.com/nowledge-co/community) | ★193 ⬇439/月 | 2026-10-21 |
 | <a id="pi-freeflow"></a>[pi-freeflow](https://github.com/trefeon/pi-freeflow) | 🌊 32 free curated AI models (up to 1M context) for Oh My Pi & Pi. Thin by design — model list, dumb relay pool, log — add your own relays to spread requests across more IPs. | 项目声明支持 omp | 自述：description: 🌊 32 free curated AI models (up to 1M context) for Oh My Pi & Pi. Thin by design — model list, dumb relay pool, log — add your own relays to spread requests across more IPs. ai-agent ai-models cline cloud [1](https://github.com/trefeon/pi-freeflow) | ★94 ⬇8,204/月 | 2026-10-21 |

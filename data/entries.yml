@@ -20,8 +20,8 @@ entries:
   verified_at: '2026-10-21'
   featured: true
   rank: 1
-  why: 一切的源头。README 用 21 节讲清卖点（LSP、调试器、TTSR、子 agent、hashline），docs/ 有约 85 篇机制文档，比任何二手介绍都准。
-  why_en: The source. The README walks through 21 features and docs/ holds about 85 mechanism docs, more accurate than any second-hand intro.
+  why: 一切的源头。README 用 21 节讲清卖点（LSP、调试器、TTSR、子 agent、hashline），docs/ 顶层有 82 篇文档（2026-10-21 主分支），比任何二手介绍都准。
+  why_en: The source. The README walks through 21 features and docs/ holds 82 top-level docs (main, 2026-10-21), more accurate than any second-hand intro.
 - id: the-harness-problem
   name: The harness problem（作者博客）
   url: https://blog.can.ac/2026/02/12/the-harness-problem/
@@ -232,8 +232,8 @@ entries:
   verified_at: '2026-10-21'
   featured: true
   rank: 11
-  why: 跨会话记忆和上下文管理，安装时自动识别 omp 并替换其内置压缩。适合长会话用户，也是理解 omp 压缩可替换的例子。
-  why_en: Cross-session memory and context management that detects omp and replaces its built-in compaction. Good for long sessions.
+  why: 跨会话记忆和上下文管理，安装时自动识别 omp，注册插件并关闭 omp 内置压缩。适合长会话用户，也说明 omp 的压缩可以被替换。
+  why_en: Cross-session memory and context management that detects omp, registers itself and turns off the built-in compaction. Good for long sessions.
 - id: gooey-pi
   name: gooey-pi
   url: https://github.com/am-will/gooey-pi
