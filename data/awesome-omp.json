@@ -833,7 +833,7 @@
      "url": "https://github.com/Aieguu/omp-docs-cn"
     }
    ],
-   "summary": "Oh My Pi 非官方中文文档站（https://Aieguu.github.io/omp-docs-cn/）",
+   "summary": "Oh My Pi 非官方中文文档站，站点 https://aieguu.github.io/omp-docs-cn/",
    "url": "https://github.com/Aieguu/omp-docs-cn",
    "verified_at": "2026-10-21",
    "why": "中文读者的入口。非官方，更新可能落后于上游，遇到出入以英文 docs/ 为准。",

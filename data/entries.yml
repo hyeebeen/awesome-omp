@@ -482,7 +482,7 @@ entries:
   omp_support: about
   evidence_type: self-claimed
   evidence: 'description: Oh My Pi 非官方中文文档站'
-  summary: Oh My Pi 非官方中文文档站（https://Aieguu.github.io/omp-docs-cn/）
+  summary: Oh My Pi 非官方中文文档站，站点 https://aieguu.github.io/omp-docs-cn/
   sources:
   - url: https://github.com/Aieguu/omp-docs-cn
     label: null
