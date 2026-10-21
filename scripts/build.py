@@ -8,7 +8,7 @@ Outputs (no wall-clock timestamps -> idempotent):
   docs/pi-compat.md       Pi vs omp compatibility matrix
   docs/timeline.md        milestones
   README.md / README.en.md  blocks between <!-- BEGIN GENERATED: X --> ... <!-- END GENERATED: X -->
-     X in: top3, featured, misconceptions, stats
+     X in: top3, featured (grouped by task), misconceptions, lore, stats
 
 Usage: build.py [--check]   (--check: exit 1 if any output would change)
 """
@@ -35,6 +35,14 @@ CATS = [  # reader-task order: understand -> start -> extend -> integrate -> wor
     ("learning", "文章 / 教程 / 讨论", "Articles, tutorials & discussions"),
     ("zh", "中文社区", "Chinese community"),
     ("adjacent", "相邻清单与项目", "Adjacent lists & projects"),
+]
+TASKS = [  # README picks grouped by what the reader wants to do (entries.yml `task`)
+    ("understand", "想弄懂原理", "Understand how it works"),
+    ("extend", "想写扩展或接插件", "Write extensions or add plugins"),
+    ("models", "想配模型和工作流", "Set up models and workflows"),
+    ("embed", "想换界面或嵌进自己的工具", "Use another UI or embed omp"),
+    ("compare", "想看社区评价和选型", "Community views and comparisons"),
+    ("zh", "中文读者", "Chinese readers"),
 ]
 CAT_ZH = {c: z for c, z, _ in CATS}
 CAT_EN = {c: e for c, _, e in CATS}
@@ -140,14 +148,21 @@ def timeline(d):
 def blocks(d, m, en=False):
     feat = sorted([e for e in d["entries"] if e.get("featured")], key=lambda e: e["rank"])
     w = "why_en" if en else "why"
-    top3 = "\n".join(f"{e['rank']}. **[{e['name']}]({e['url']})**：{e[w]}" for e in feat[:3])
-    rows = []
-    for e in feat:
-        cat = CAT_EN[e["category"]] if en else CAT_ZH[e["category"]]
-        rows.append(f"| {e['rank']} | [{esc(e['name'])}]({e['url']}) | {cat} | {esc(e[w])} | "
-                    f"[{'details' if en else '详情'}](docs/ecosystem.md#{e['id']}) |")
-    head = "| # | Pick | Category | Why it is worth your time | Data |" if en else "| # | 条目 | 分类 | 为什么值得看 | 数据 |"
-    featured = "\n".join([head, "|---|---|---|---|---|"] + rows)
+    top3 = "\n".join(f"{e['rank']}. **[{e['name']}]({e['url']})**{': ' if en else '：'}{e[w]}" for e in feat[:3])
+    groups = []
+    for key, zh, eng in TASKS:
+        items = [e for e in feat if e.get("task") == key]
+        if not items:
+            continue
+        groups += [f"### {eng if en else zh}", ""]
+        for e in items:
+            cat = CAT_EN[e["category"]] if en else CAT_ZH[e["category"]]
+            if en:
+                groups.append(f"- **[{e['name']}]({e['url']})** ({cat}) — {e[w]} [details](docs/ecosystem.md#{e['id']})")
+            else:
+                groups.append(f"- **[{e['name']}]({e['url']})**（{cat}）：{e[w]} [详情](docs/ecosystem.md#{e['id']})")
+        groups.append("")
+    featured = "\n".join(groups).rstrip()
     mis = []
     for i, x in enumerate(d["misconceptions"], 1):
         src = " ".join(f"[{s.get('label') or 'source'}]({s['url']})" for s in x["sources"])
@@ -167,7 +182,15 @@ def blocks(d, m, en=False):
         stats = (f"共 {len(d['entries'])} 条，{len(by)} 个分类；精选 {len(feat)} 条；常见误解 {len(d['misconceptions'])} 条；"
                  f"兼容矩阵 {len(d['compat'])} 行。其中 omp 官方 {sup.get('native', 0)} 条，项目声明支持 omp {sup.get('declared', 0)} 条，"
                  f"Pi 包在 omp 实测加载 {sup.get('pi-compat-tested', 0)} 条。指标抓取于 {m.get('fetched_at') or '未抓取'}（Asia/Shanghai）。")
-    return {"top3": top3, "featured": featured, "misconceptions": misc, "stats": stats}
+    lore = []
+    for x in sorted([x for x in d["milestones"] if x.get("lore")], key=lambda x: x["date"]):
+        src = x["sources"][0]["url"]
+        what = x["what_en"] if en else x["what"]
+        if en:
+            lore.append(f"- **{x['date']}** · {what} ([{x['evidence_type']}]({src}))")
+        else:
+            lore.append(f"- **{x['date']}** · {what}（[{EVID[x['evidence_type']]}]({src})）")
+    return {"top3": top3, "featured": featured, "misconceptions": misc, "lore": "\n".join(lore), "stats": stats}
 
 
 def replace_blocks(text, bl, path):

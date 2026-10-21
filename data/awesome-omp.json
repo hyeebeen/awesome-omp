@@ -208,6 +208,7 @@
     }
    ],
    "summary": "Coding agent with the IDE wired in. Built by Stencil Labs.",
+   "task": "understand",
    "url": "https://github.com/can1357/oh-my-pi",
    "verified_at": "2026-10-21",
    "why": "一切的源头。README 用 21 节讲清卖点（LSP、调试器、TTSR、子 agent、hashline），docs/ 顶层有 82 篇文档（2026-10-21 主分支），比任何二手介绍都准。",
@@ -234,6 +235,7 @@
      "url": "https://blog.can.ac/2026/02/12/the-harness-problem/"
     }
    ],
+   "task": "understand",
    "url": "https://blog.can.ac/2026/02/12/the-harness-problem/",
    "verified_at": "2026-10-21",
    "why": "读懂 omp 为什么存在：作者认为瓶颈常在 harness 而不是模型，只换编辑格式（hashline）就让多数模型通过率上升。数字是自述基准，配合「常见误解」看。",
@@ -264,6 +266,7 @@
      "url": "https://news.ycombinator.com/item?id=49539332"
     }
    ],
+   "task": "understand",
    "url": "https://stencil.so/blog/harness-playbook",
    "verified_at": "2026-10-21",
    "why": "作者亲自复盘 omp 哪里做错了，并公布替代架构 omp²（扩展改用 Python）。想在 omp 上长期投入扩展开发，先读这篇。",
@@ -289,6 +292,7 @@
      "url": "https://github.com/can1357/oh-my-pi/blob/main/docs/extension-loading.md"
     }
    ],
+   "task": "extend",
    "url": "https://github.com/can1357/oh-my-pi/blob/main/docs/extensions.md",
    "verified_at": "2026-10-21",
    "why": "写扩展的唯一权威：工厂函数、事件、工具、斜杠命令、UI，以及从哪些目录发现扩展。本仓库的最小扩展照它写成并实测可加载。",
@@ -314,6 +318,7 @@
      "url": "https://github.com/hyeebeen/awesome-omp/blob/main/examples/RUNLOG.md"
     }
    ],
+   "task": "extend",
    "url": "https://github.com/can1357/oh-my-pi/blob/main/docs/marketplace.md",
    "verified_at": "2026-10-21",
    "why": "omp 能直接用 Claude Code 插件市场格式，这是它和 Pi 最大的生态差异。文档讲清作用域、锁文件和刷新规则。",
@@ -344,6 +349,7 @@
      "url": "https://github.com/can1357/oh-my-pi/blob/main/README.md"
     }
    ],
+   "task": "compare",
    "url": "https://github.com/earendil-works/pi",
    "verified_at": "2026-10-21",
    "why": "omp 的上游。理解「Pi 极简、omp 全家桶」的分工，以及哪些 Pi 包能搬过来（见兼容矩阵）。",
@@ -365,6 +371,7 @@
      "url": "https://github.com/can1357/oh-my-pi/blob/main/docs/ttsr-injection-lifecycle.md"
     }
    ],
+   "task": "understand",
    "url": "https://github.com/can1357/oh-my-pi/blob/main/docs/ttsr-injection-lifecycle.md",
    "verified_at": "2026-10-21",
    "why": "omp 最独特的机制：规则平时不占上下文，模型输出命中正则才中断流、注入规则并重试。这篇把发现、中断、重试、会话状态一路讲到源码。",
@@ -390,6 +397,7 @@
      "url": "https://news.ycombinator.com/item?id=48994611"
     }
    ],
+   "task": "compare",
    "url": "https://news.ycombinator.com/item?id=48994611",
    "verified_at": "2026-10-21",
    "why": "真实用户的正反声音：上手快、搜索集成好；也有人担心用订阅账号走 OAuth 会被封、质疑跑分。",
@@ -416,6 +424,7 @@
      "url": "https://doug.sh/posts/oh-my-pi-custom-models/"
     }
    ],
+   "task": "models",
    "url": "https://doug.sh/posts/oh-my-pi-custom-models/",
    "verified_at": "2026-10-21",
    "why": "跑本地模型最实用的一篇：各推理服务的 models.yml 可用配置、模型角色和白名单，并注明 omp 18.2.7 之后要改的两处。",
@@ -467,6 +476,7 @@
     }
    ],
    "summary": "Web search and content extraction extension for Pi coding agent",
+   "task": "extend",
    "url": "https://github.com/nicobailon/pi-web-access",
    "verified_at": "2026-10-21",
    "why": "Pi 包在 omp 上能用的实证：装上即有 web_search，但需要 Pi 0.86+ 的动态激活功能自动关闭。拿它当「搬 Pi 包」的参照。",
@@ -491,6 +501,7 @@
     }
    ],
    "summary": "Unbounded context. Memory that manages itself.",
+   "task": "models",
    "url": "https://github.com/cortexkit/magic-context",
    "verified_at": "2026-10-21",
    "why": "跨会话记忆和上下文管理，安装时自动识别 omp，注册插件并关闭 omp 内置压缩。适合长会话用户，也说明 omp 的压缩可以被替换。",
@@ -514,6 +525,7 @@
     }
    ],
    "summary": "Desktop workspace for Pi, OMP, and Prime Agent",
+   "task": "embed",
    "url": "https://github.com/am-will/gooey-pi",
    "verified_at": "2026-10-21",
    "why": "不想用 TUI 时最受关注的桌面前端之一（Electron，跨平台），同时支持 Pi 和 omp。",
@@ -597,6 +609,7 @@
     }
    ],
    "summary": "Think Claude Code's auto mode but for pi (and oh-my-pi).",
+   "task": "models",
    "url": "https://github.com/czottmann/pi-automode",
    "verified_at": "2026-10-21",
    "why": "给 omp 加类似 Claude Code 的自动审批模式，由一个可选模型判断哪些操作可放行。权限和效率之间的折中，值得对照 omp 自带的 approval-mode 一起看。",
@@ -643,6 +656,7 @@
      "url": "https://github.com/can1357/oh-my-pi/blob/main/docs/marketplace.md"
     }
    ],
+   "task": "extend",
    "url": "https://github.com/anthropics/claude-plugins-official",
    "verified_at": "2026-10-21",
    "why": "omp 文档官方示例里的插件市场源。一条命令就能把 Claude Code 生态的插件接进 omp，但插件内容是否全部可用要自己验证。",
@@ -668,6 +682,7 @@
      "url": "https://composio.dev/content/pi-vs-omp"
     }
    ],
+   "task": "compare",
    "url": "https://composio.dev/content/pi-vs-omp",
    "verified_at": "2026-10-21",
    "why": "少见的 Pi 与 omp 并排对比，适合选型前快速扫一遍。是厂商内容，结论请对照本仓库兼容矩阵。",
@@ -720,6 +735,7 @@
      "url": "https://james-carr.org/posts/2026-09-30-current-agentic-development-setup-orca-oh-my-pi/"
     }
    ],
+   "task": "models",
    "url": "https://james-carr.org/posts/2026-09-30-current-agentic-development-setup-orca-oh-my-pi/",
    "verified_at": "2026-10-21",
    "why": "讲清 omp 的「模型角色」怎么分工（default、smol、slow、plan 等各用什么模型），是把多模型路由落地的具体样例。",
@@ -834,6 +850,7 @@
     }
    ],
    "summary": "Oh My Pi 非官方中文文档站，站点 https://aieguu.github.io/omp-docs-cn/",
+   "task": "zh",
    "url": "https://github.com/Aieguu/omp-docs-cn",
    "verified_at": "2026-10-21",
    "why": "中文读者的入口。非官方，更新可能落后于上游，遇到出入以英文 docs/ 为准。",
@@ -877,6 +894,7 @@
     }
    ],
    "summary": "A curated slice of the π ecosystem",
+   "task": "compare",
    "url": "https://github.com/thevibeworks/awesome-pi-agent",
    "verified_at": "2026-10-21",
    "why": "Pi 生态人工策展清单，omp 只占一节。想看 omp 之外的 Pi 扩展、分支和前端，去那里。",
@@ -968,6 +986,7 @@
      "url": "https://github.com/hyeebeen/awesome-omp/blob/main/examples/RUNLOG.md"
     }
    ],
+   "task": "embed",
    "url": "https://github.com/can1357/oh-my-pi/blob/main/docs/rpc.md",
    "verified_at": "2026-10-21",
    "why": "把 omp 嵌进自己工具的两条路：Node SDK 和 stdio NDJSON 的 RPC。我们的离线测试就是用 RPC 读命令和工具列表，不调用模型。",
@@ -1029,6 +1048,7 @@
      "url": "https://github.com/can1357/oh-my-pi/blob/main/docs/task-agent-discovery.md"
     }
    ],
+   "task": "understand",
    "url": "https://github.com/can1357/oh-my-pi/blob/main/docs/task-agent-discovery.md",
    "verified_at": "2026-10-21",
    "why": "子 agent 是 omp 的主力工作方式。这篇讲清 agent 定义字段、来源优先级、spawn 深度限制，自己写 agent 前必读。",
@@ -10849,6 +10869,7 @@
   {
    "date": "2025-12-31",
    "evidence_type": "verified",
+   "lore": true,
    "sources": [
     {
      "label": "repos API created_at",
@@ -10856,11 +10877,13 @@
     }
    ],
    "version": null,
-   "what": "can1357/oh-my-pi 仓库创建"
+   "what": "can1357/oh-my-pi 仓库创建",
+   "what_en": "can1357/oh-my-pi repository created"
   },
   {
    "date": "2026-01-03",
    "evidence_type": "verified",
+   "lore": true,
    "sources": [
     {
      "label": null,
@@ -10868,11 +10891,13 @@
     }
    ],
    "version": "v1.337.1",
-   "what": "第一个 GitHub release"
+   "what": "第一个 GitHub release",
+   "what_en": "First GitHub release (v1.337.1)"
   },
   {
    "date": "2026-02-12",
    "evidence_type": "self-claimed",
+   "lore": true,
    "sources": [
     {
      "label": null,
@@ -10880,7 +10905,8 @@
     }
    ],
    "version": null,
-   "what": "作者发文《The harness problem》：只换编辑工具（hashline），16 个模型中 14 个通过率提高（作者基准）"
+   "what": "作者发文《The harness problem》：只换编辑工具（hashline），16 个模型中 14 个通过率提高（作者基准）",
+   "what_en": "Author's post \"The harness problem\": changing only the edit tool (hashline) raised pass rates for 14 of 16 models (author's benchmark)"
   },
   {
    "date": "2026-02-13",
@@ -10945,6 +10971,7 @@
   {
    "date": "2026-08-22",
    "evidence_type": "verified",
+   "lore": true,
    "sources": [
     {
      "label": null,
@@ -10952,11 +10979,13 @@
     }
    ],
    "version": "v18.0.0",
-   "what": "进入 v18"
+   "what": "进入 v18",
+   "what_en": "v18.0.0"
   },
   {
    "date": "2026-09-02",
    "evidence_type": "self-claimed",
+   "lore": true,
    "sources": [
     {
      "label": null,
@@ -10964,7 +10993,8 @@
     }
    ],
    "version": null,
-   "what": "《The Harness Playbook》：omp 复盘，并公布替代架构 omp²（部分已建，部分在做；扩展改用 Python）"
+   "what": "《The Harness Playbook》：omp 复盘，并公布替代架构 omp²（部分已建，部分在做；扩展改用 Python）",
+   "what_en": "\"The Harness Playbook\": a retrospective on omp and the announced successor architecture omp² (extensions in Python)"
   },
   {
    "date": "2026-10-09",

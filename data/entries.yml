@@ -20,6 +20,7 @@ entries:
   verified_at: '2026-10-21'
   featured: true
   rank: 1
+  task: understand
   why: 一切的源头。README 用 21 节讲清卖点（LSP、调试器、TTSR、子 agent、hashline），docs/ 顶层有 82 篇文档（2026-10-21 主分支），比任何二手介绍都准。
   why_en: The source. The README walks through 21 features and docs/ holds 82 top-level docs (main, 2026-10-21), more accurate than any second-hand intro.
 - id: the-harness-problem
@@ -40,6 +41,7 @@ entries:
   verified_at: '2026-10-21'
   featured: true
   rank: 2
+  task: understand
   why: 读懂 omp 为什么存在：作者认为瓶颈常在 harness 而不是模型，只换编辑格式（hashline）就让多数模型通过率上升。数字是自述基准，配合「常见误解」看。
   why_en: 'Why omp exists: the author argues the harness, not the model, is often the bottleneck; changing only the edit format (hashline) lifted most models. Self-reported benchmark.'
 - id: harness-playbook
@@ -62,6 +64,7 @@ entries:
   verified_at: '2026-10-21'
   featured: true
   rank: 3
+  task: understand
   why: 作者亲自复盘 omp 哪里做错了，并公布替代架构 omp²（扩展改用 Python）。想在 omp 上长期投入扩展开发，先读这篇。
   why_en: The author's own postmortem of omp and the plan for omp² (Python extensions). Read before investing in omp extensions.
 - id: docs-extensions
@@ -80,6 +83,7 @@ entries:
   verified_at: '2026-10-21'
   featured: true
   rank: 4
+  task: extend
   why: 写扩展的唯一权威：工厂函数、事件、工具、斜杠命令、UI，以及从哪些目录发现扩展。本仓库的最小扩展照它写成并实测可加载。
   why_en: 'The authority on writing extensions: factory, events, tools, slash commands, UI, and discovery paths. Our minimal extension follows it and loads in tests.'
 - id: docs-marketplace
@@ -98,6 +102,7 @@ entries:
   verified_at: '2026-10-21'
   featured: true
   rank: 5
+  task: extend
   why: omp 能直接用 Claude Code 插件市场格式，这是它和 Pi 最大的生态差异。文档讲清作用域、锁文件和刷新规则。
   why_en: omp reads the Claude Code plugin marketplace format, its biggest ecosystem difference from Pi. Covers scopes, lockfile and reload rules.
 - id: earendil-pi
@@ -120,6 +125,7 @@ entries:
   verified_at: '2026-10-21'
   featured: true
   rank: 6
+  task: compare
   why: omp 的上游。理解「Pi 极简、omp 全家桶」的分工，以及哪些 Pi 包能搬过来（见兼容矩阵）。
   why_en: omp's upstream. Explains the minimal-Pi vs batteries-included-omp split and which Pi packages carry over (see the compat matrix).
 - id: docs-ttsr
@@ -136,6 +142,7 @@ entries:
   verified_at: '2026-10-21'
   featured: true
   rank: 7
+  task: understand
   why: omp 最独特的机制：规则平时不占上下文，模型输出命中正则才中断流、注入规则并重试。这篇把发现、中断、重试、会话状态一路讲到源码。
   why_en: 'omp''s most distinctive mechanism: rules cost no context until the output matches a regex, then the stream is aborted, the rule injected and the turn retried. Traced to source.'
 - id: hn-launch
@@ -155,6 +162,7 @@ entries:
   verified_at: '2026-10-21'
   featured: true
   rank: 8
+  task: compare
   why: 真实用户的正反声音：上手快、搜索集成好；也有人担心用订阅账号走 OAuth 会被封、质疑跑分。
   why_en: 'Real user voices: easy start and good search integration, but also worries about subscription OAuth bans and doubts about benchmarks.'
 - id: doug-custom-models
@@ -175,6 +183,7 @@ entries:
   verified_at: '2026-10-21'
   featured: true
   rank: 9
+  task: models
   why: 跑本地模型最实用的一篇：各推理服务的 models.yml 可用配置、模型角色和白名单，并注明 omp 18.2.7 之后要改的两处。
   why_en: 'Most practical guide to local models: working models.yml for each inference server, model roles and allowlists, plus two changes needed since omp 18.2.7.'
 - id: doug-tuning-local
@@ -213,6 +222,7 @@ entries:
   verified_at: '2026-10-21'
   featured: true
   rank: 10
+  task: extend
   why: Pi 包在 omp 上能用的实证：装上即有 web_search，但需要 Pi 0.86+ 的动态激活功能自动关闭。拿它当「搬 Pi 包」的参照。
   why_en: 'Evidence that Pi packages can work on omp: installs and exposes web_search, but a feature needing Pi 0.86+ is disabled. A reference for porting Pi packages.'
 - id: magic-context
@@ -232,6 +242,7 @@ entries:
   verified_at: '2026-10-21'
   featured: true
   rank: 11
+  task: models
   why: 跨会话记忆和上下文管理，安装时自动识别 omp，注册插件并关闭 omp 内置压缩。适合长会话用户，也说明 omp 的压缩可以被替换。
   why_en: Cross-session memory and context management that detects omp, registers itself and turns off the built-in compaction. Good for long sessions.
 - id: gooey-pi
@@ -250,6 +261,7 @@ entries:
   verified_at: '2026-10-21'
   featured: true
   rank: 12
+  task: embed
   why: 不想用 TUI 时最受关注的桌面前端之一（Electron，跨平台），同时支持 Pi 和 omp。
   why_en: One of the most-starred desktop frontends (Electron, cross-platform) for people who prefer a GUI; supports both Pi and omp.
 - id: oh-my-pi-gui
@@ -313,6 +325,7 @@ entries:
   verified_at: '2026-10-21'
   featured: true
   rank: 13
+  task: models
   why: 给 omp 加类似 Claude Code 的自动审批模式，由一个可选模型判断哪些操作可放行。权限和效率之间的折中，值得对照 omp 自带的 approval-mode 一起看。
   why_en: 'Adds a Claude-Code-style auto mode: a chosen model decides which actions can proceed. Compare with omp''s own approval-mode.'
 - id: memorix
@@ -347,6 +360,7 @@ entries:
   verified_at: '2026-10-21'
   featured: true
   rank: 14
+  task: extend
   why: omp 文档官方示例里的插件市场源。一条命令就能把 Claude Code 生态的插件接进 omp，但插件内容是否全部可用要自己验证。
   why_en: The marketplace used in omp's own quick start. One command brings Claude Code plugins into omp; verify each plugin yourself.
 - id: composio-pi-vs-omp
@@ -366,6 +380,7 @@ entries:
   verified_at: '2026-10-21'
   featured: true
   rank: 15
+  task: compare
   why: 少见的 Pi 与 omp 并排对比，适合选型前快速扫一遍。是厂商内容，结论请对照本仓库兼容矩阵。
   why_en: A rare side-by-side of Pi and omp for quick orientation. Vendor content; check claims against our compat matrix.
 - id: flashblaze-omp-setup
@@ -404,6 +419,7 @@ entries:
   verified_at: '2026-10-21'
   featured: true
   rank: 16
+  task: models
   why: 讲清 omp 的「模型角色」怎么分工（default、smol、slow、plan 等各用什么模型），是把多模型路由落地的具体样例。
   why_en: A concrete example of omp model roles (default, smol, slow, plan...) and which model fills each.
 - id: snapcompact
@@ -489,6 +505,7 @@ entries:
   verified_at: '2026-10-21'
   featured: true
   rank: 17
+  task: zh
   why: 中文读者的入口。非官方，更新可能落后于上游，遇到出入以英文 docs/ 为准。
   why_en: Entry point for Chinese readers. Unofficial and may lag upstream; English docs/ win on conflicts.
 - id: pi-harness-course
@@ -522,6 +539,7 @@ entries:
   verified_at: '2026-10-21'
   featured: true
   rank: 18
+  task: compare
   why: Pi 生态人工策展清单，omp 只占一节。想看 omp 之外的 Pi 扩展、分支和前端，去那里。
   why_en: Hand-curated Pi ecosystem list where omp is one section. Go there for Pi-wide extensions, forks and frontends.
 - id: shaftoe-awesome-pi-coding-agent
@@ -587,6 +605,7 @@ entries:
   verified_at: '2026-10-21'
   featured: true
   rank: 19
+  task: embed
   why: 把 omp 嵌进自己工具的两条路：Node SDK 和 stdio NDJSON 的 RPC。我们的离线测试就是用 RPC 读命令和工具列表，不调用模型。
   why_en: 'Two ways to embed omp: the Node SDK and stdio NDJSON RPC. Our offline tests use RPC to list commands and tools without calling a model.'
 - id: docs-models
@@ -631,6 +650,7 @@ entries:
   verified_at: '2026-10-21'
   featured: true
   rank: 20
+  task: understand
   why: 子 agent 是 omp 的主力工作方式。这篇讲清 agent 定义字段、来源优先级、spawn 深度限制，自己写 agent 前必读。
   why_en: Subagents are omp's main way of working. Covers agent definition fields, source precedence and spawn-depth limits.
 - id: omp-sh

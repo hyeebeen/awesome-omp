@@ -44,8 +44,33 @@ class DataTests(unittest.TestCase):
         bl = build.blocks(self.d, load_metrics())
         self.assertEqual(bl["top3"].count("\n") + 1, 3)
         feat = sum(e["featured"] for e in self.d["entries"])
-        self.assertEqual(bl["featured"].count("\n") - 1, feat)
+        self.assertEqual(sum(l.startswith("- **[") for l in bl["featured"].splitlines()), feat)
+        self.assertNotIn("| Data |", bl["featured"])
         self.assertIn(str(len(self.d["entries"])), bl["stats"])
+
+    def test_featured_grouped_by_task(self):
+        tasks = [t[0] for t in build.TASKS]
+        for e in self.d["entries"]:
+            if e["featured"]:
+                self.assertIn(e.get("task"), tasks, e["id"])
+        for en in (False, True):
+            bl = build.blocks(self.d, load_metrics(), en)
+            self.assertEqual(bl["featured"].count("### "), len({e["task"] for e in self.d["entries"] if e["featured"]}))
+
+    def test_lore_block_from_milestones(self):
+        lore = [x for x in self.d["milestones"] if x.get("lore")]
+        self.assertGreaterEqual(len(lore), 3)
+        for en in (False, True):
+            bl = build.blocks(self.d, load_metrics(), en)
+            self.assertEqual(bl["lore"].count("\n") + 1, len(lore))
+            for x in lore:
+                self.assertIn(x["date"], bl["lore"])
+
+    def test_readme_safety_notice_on_first_screen(self):
+        for f in ("README.md", "README.en.md"):
+            head = "\n".join((ROOT / f).read_text(encoding="utf-8").splitlines()[:20])
+            self.assertIn("[!WARNING]", head, f)
+            self.assertIn("--no-extensions", head, f)
 
     def test_misconceptions_cover_name_confusion(self):
         ids = {m["id"] for m in self.d["misconceptions"]}

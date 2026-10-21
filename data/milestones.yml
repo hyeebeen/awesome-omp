@@ -1,16 +1,22 @@
 # Timeline. Dates are publish dates; release times converted to Asia/Shanghai date.
 milestones:
 - date: '2025-12-31'
+  lore: true
+  what_en: "can1357/oh-my-pi repository created"
   version: null
   what: can1357/oh-my-pi 仓库创建
   evidence_type: verified
   sources: [{url: "https://api.github.com/repos/can1357/oh-my-pi", label: repos API created_at}]
 - date: '2026-01-03'
+  lore: true
+  what_en: "First GitHub release (v1.337.1)"
   version: v1.337.1
   what: 第一个 GitHub release
   evidence_type: verified
   sources: [{url: "https://github.com/can1357/oh-my-pi/releases/tag/v1.337.1", label: null}]
 - date: '2026-02-12'
+  lore: true
+  what_en: "Author's post \"The harness problem\": changing only the edit tool (hashline) raised pass rates for 14 of 16 models (author's benchmark)"
   version: null
   what: 作者发文《The harness problem》：只换编辑工具（hashline），16 个模型中 14 个通过率提高（作者基准）
   evidence_type: self-claimed
@@ -41,11 +47,15 @@ milestones:
   evidence_type: verified
   sources: [{url: "https://news.ycombinator.com/item?id=48994611", label: null}]
 - date: '2026-08-22'
+  lore: true
+  what_en: "v18.0.0"
   version: v18.0.0
   what: 进入 v18
   evidence_type: verified
   sources: [{url: "https://github.com/can1357/oh-my-pi/releases/tag/v18.0.0", label: null}]
 - date: '2026-09-02'
+  lore: true
+  what_en: "\"The Harness Playbook\": a retrospective on omp and the announced successor architecture omp\u00b2 (extensions in Python)"
   version: null
   what: 《The Harness Playbook》：omp 复盘，并公布替代架构 omp²（部分已建，部分在做；扩展改用 Python）
   evidence_type: self-claimed

@@ -20,6 +20,8 @@ English | [中文](README.md)
 - [Core mechanisms at a glance](#core-mechanisms-at-a-glance)
 - [Featured](#featured)
 - [Common misconceptions](#common-misconceptions)
+- [What the community says](#what-the-community-says)
+- [Origins](#origins)
 - [Go deeper](#go-deeper)
 - [Inclusion rules](#inclusion-rules)
 - [How this differs from other lists](#how-this-differs-from-other-lists)
@@ -29,9 +31,9 @@ English | [中文](README.md)
 ## Start with these 3
 
 <!-- BEGIN GENERATED: top3 -->
-1. **[omp (can1357/oh-my-pi)](https://github.com/can1357/oh-my-pi)**：The source. The README walks through 21 features and docs/ holds 82 top-level docs (main, 2026-10-21), more accurate than any second-hand intro.
-2. **[The harness problem（作者博客）](https://blog.can.ac/2026/02/12/the-harness-problem/)**：Why omp exists: the author argues the harness, not the model, is often the bottleneck; changing only the edit format (hashline) lifted most models. Self-reported benchmark.
-3. **[The Harness Playbook（Stencil 博客）](https://stencil.so/blog/harness-playbook)**：The author's own postmortem of omp and the plan for omp² (Python extensions). Read before investing in omp extensions.
+1. **[omp (can1357/oh-my-pi)](https://github.com/can1357/oh-my-pi)**: The source. The README walks through 21 features and docs/ holds 82 top-level docs (main, 2026-10-21), more accurate than any second-hand intro.
+2. **[The harness problem（作者博客）](https://blog.can.ac/2026/02/12/the-harness-problem/)**: Why omp exists: the author argues the harness, not the model, is often the bottleneck; changing only the edit format (hashline) lifted most models. Self-reported benchmark.
+3. **[The Harness Playbook（Stencil 博客）](https://stencil.so/blog/harness-playbook)**: The author's own postmortem of omp and the plan for omp² (Python extensions). Read before investing in omp extensions.
 <!-- END GENERATED: top3 -->
 
 ## omp in 30 seconds
@@ -112,31 +114,46 @@ sequenceDiagram
 
 ## Featured
 
-Full registry: [docs/ecosystem.md](docs/ecosystem.md).
+Grouped by what you want to do. Full registry: [docs/ecosystem.md](docs/ecosystem.md).
 
 <!-- BEGIN GENERATED: featured -->
-| # | Pick | Category | Why it is worth your time | Data |
-|---|---|---|---|---|
-| 1 | [omp (can1357/oh-my-pi)](https://github.com/can1357/oh-my-pi) | omp itself | The source. The README walks through 21 features and docs/ holds 82 top-level docs (main, 2026-10-21), more accurate than any second-hand intro. | [details](docs/ecosystem.md#oh-my-pi) |
-| 2 | [The harness problem（作者博客）](https://blog.can.ac/2026/02/12/the-harness-problem/) | Articles, tutorials & discussions | Why omp exists: the author argues the harness, not the model, is often the bottleneck; changing only the edit format (hashline) lifted most models. Self-reported benchmark. | [details](docs/ecosystem.md#the-harness-problem) |
-| 3 | [The Harness Playbook（Stencil 博客）](https://stencil.so/blog/harness-playbook) | Articles, tutorials & discussions | The author's own postmortem of omp and the plan for omp² (Python extensions). Read before investing in omp extensions. | [details](docs/ecosystem.md#harness-playbook) |
-| 4 | [omp 文档：Extensions + Extension loading](https://github.com/can1357/oh-my-pi/blob/main/docs/extensions.md) | Official docs | The authority on writing extensions: factory, events, tools, slash commands, UI, and discovery paths. Our minimal extension follows it and loads in tests. | [details](docs/ecosystem.md#docs-extensions) |
-| 5 | [omp 文档：Marketplace 插件系统](https://github.com/can1357/oh-my-pi/blob/main/docs/marketplace.md) | Official docs | omp reads the Claude Code plugin marketplace format, its biggest ecosystem difference from Pi. Covers scopes, lockfile and reload rules. | [details](docs/ecosystem.md#docs-marketplace) |
-| 6 | [Pi（earendil-works/pi，原 badlogic/pi-mono）](https://github.com/earendil-works/pi) | Adjacent lists & projects | omp's upstream. Explains the minimal-Pi vs batteries-included-omp split and which Pi packages carry over (see the compat matrix). | [details](docs/ecosystem.md#earendil-pi) |
-| 7 | [omp 文档：TTSR 注入生命周期](https://github.com/can1357/oh-my-pi/blob/main/docs/ttsr-injection-lifecycle.md) | Official docs | omp's most distinctive mechanism: rules cost no context until the output matches a regex, then the stream is aborted, the rule injected and the turn retried. Traced to source. | [details](docs/ecosystem.md#docs-ttsr) |
-| 8 | [Hacker News：Oh-my-pi – A coding agent with the IDE wired in](https://news.ycombinator.com/item?id=48994611) | Articles, tutorials & discussions | Real user voices: easy start and good search integration, but also worries about subscription OAuth bans and doubts about benchmarks. | [details](docs/ecosystem.md#hn-launch) |
-| 9 | [Custom Models in Oh My Pi（doug.sh）](https://doug.sh/posts/oh-my-pi-custom-models/) | Models & providers | Most practical guide to local models: working models.yml for each inference server, model roles and allowlists, plus two changes needed since omp 18.2.7. | [details](docs/ecosystem.md#doug-custom-models) |
-| 10 | [pi-web-access](https://github.com/nicobailon/pi-web-access) | Extensions | Evidence that Pi packages can work on omp: installs and exposes web_search, but a feature needing Pi 0.86+ is disabled. A reference for porting Pi packages. | [details](docs/ecosystem.md#pi-web-access) |
-| 11 | [Magic Context（cortexkit）](https://github.com/cortexkit/magic-context) | Memory & context | Cross-session memory and context management that detects omp, registers itself and turns off the built-in compaction. Good for long sessions. | [details](docs/ecosystem.md#magic-context) |
-| 12 | [gooey-pi](https://github.com/am-will/gooey-pi) | Desktop, web & mobile frontends | One of the most-starred desktop frontends (Electron, cross-platform) for people who prefer a GUI; supports both Pi and omp. | [details](docs/ecosystem.md#gooey-pi) |
-| 13 | [pi-automode](https://github.com/czottmann/pi-automode) | Workflows & multi-agent | Adds a Claude-Code-style auto mode: a chosen model decides which actions can proceed. Compare with omp's own approval-mode. | [details](docs/ecosystem.md#pi-automode) |
-| 14 | [anthropics/claude-plugins-official](https://github.com/anthropics/claude-plugins-official) | Marketplaces | The marketplace used in omp's own quick start. One command brings Claude Code plugins into omp; verify each plugin yourself. | [details](docs/ecosystem.md#claude-plugins-official) |
-| 15 | [Pi vs OMP (Oh My Pi Agent)：Everything You Need to Know（Composio）](https://composio.dev/content/pi-vs-omp) | Articles, tutorials & discussions | A rare side-by-side of Pi and omp for quick orientation. Vendor content; check claims against our compat matrix. | [details](docs/ecosystem.md#composio-pi-vs-omp) |
-| 16 | [Current Agentic Development Environment：Orca + Oh My Pi](https://james-carr.org/posts/2026-09-30-current-agentic-development-setup-orca-oh-my-pi/) | Articles, tutorials & discussions | A concrete example of omp model roles (default, smol, slow, plan...) and which model fills each. | [details](docs/ecosystem.md#james-carr-orca-omp) |
-| 17 | [omp-docs-cn（非官方中文文档站）](https://github.com/Aieguu/omp-docs-cn) | Chinese community | Entry point for Chinese readers. Unofficial and may lag upstream; English docs/ win on conflicts. | [details](docs/ecosystem.md#omp-docs-cn) |
-| 18 | [thevibeworks/awesome-pi-agent](https://github.com/thevibeworks/awesome-pi-agent) | Adjacent lists & projects | Hand-curated Pi ecosystem list where omp is one section. Go there for Pi-wide extensions, forks and frontends. | [details](docs/ecosystem.md#thevibeworks-awesome-pi-agent) |
-| 19 | [omp 文档：RPC 与 SDK](https://github.com/can1357/oh-my-pi/blob/main/docs/rpc.md) | Official docs | Two ways to embed omp: the Node SDK and stdio NDJSON RPC. Our offline tests use RPC to list commands and tools without calling a model. | [details](docs/ecosystem.md#docs-rpc-sdk) |
-| 20 | [omp 文档：子 agent 发现与选择](https://github.com/can1357/oh-my-pi/blob/main/docs/task-agent-discovery.md) | Official docs | Subagents are omp's main way of working. Covers agent definition fields, source precedence and spawn-depth limits. | [details](docs/ecosystem.md#docs-task-agents) |
+### Understand how it works
+
+- **[omp (can1357/oh-my-pi)](https://github.com/can1357/oh-my-pi)** (omp itself) — The source. The README walks through 21 features and docs/ holds 82 top-level docs (main, 2026-10-21), more accurate than any second-hand intro. [details](docs/ecosystem.md#oh-my-pi)
+- **[The harness problem（作者博客）](https://blog.can.ac/2026/02/12/the-harness-problem/)** (Articles, tutorials & discussions) — Why omp exists: the author argues the harness, not the model, is often the bottleneck; changing only the edit format (hashline) lifted most models. Self-reported benchmark. [details](docs/ecosystem.md#the-harness-problem)
+- **[The Harness Playbook（Stencil 博客）](https://stencil.so/blog/harness-playbook)** (Articles, tutorials & discussions) — The author's own postmortem of omp and the plan for omp² (Python extensions). Read before investing in omp extensions. [details](docs/ecosystem.md#harness-playbook)
+- **[omp 文档：TTSR 注入生命周期](https://github.com/can1357/oh-my-pi/blob/main/docs/ttsr-injection-lifecycle.md)** (Official docs) — omp's most distinctive mechanism: rules cost no context until the output matches a regex, then the stream is aborted, the rule injected and the turn retried. Traced to source. [details](docs/ecosystem.md#docs-ttsr)
+- **[omp 文档：子 agent 发现与选择](https://github.com/can1357/oh-my-pi/blob/main/docs/task-agent-discovery.md)** (Official docs) — Subagents are omp's main way of working. Covers agent definition fields, source precedence and spawn-depth limits. [details](docs/ecosystem.md#docs-task-agents)
+
+### Write extensions or add plugins
+
+- **[omp 文档：Extensions + Extension loading](https://github.com/can1357/oh-my-pi/blob/main/docs/extensions.md)** (Official docs) — The authority on writing extensions: factory, events, tools, slash commands, UI, and discovery paths. Our minimal extension follows it and loads in tests. [details](docs/ecosystem.md#docs-extensions)
+- **[omp 文档：Marketplace 插件系统](https://github.com/can1357/oh-my-pi/blob/main/docs/marketplace.md)** (Official docs) — omp reads the Claude Code plugin marketplace format, its biggest ecosystem difference from Pi. Covers scopes, lockfile and reload rules. [details](docs/ecosystem.md#docs-marketplace)
+- **[pi-web-access](https://github.com/nicobailon/pi-web-access)** (Extensions) — Evidence that Pi packages can work on omp: installs and exposes web_search, but a feature needing Pi 0.86+ is disabled. A reference for porting Pi packages. [details](docs/ecosystem.md#pi-web-access)
+- **[anthropics/claude-plugins-official](https://github.com/anthropics/claude-plugins-official)** (Marketplaces) — The marketplace used in omp's own quick start. One command brings Claude Code plugins into omp; verify each plugin yourself. [details](docs/ecosystem.md#claude-plugins-official)
+
+### Set up models and workflows
+
+- **[Custom Models in Oh My Pi（doug.sh）](https://doug.sh/posts/oh-my-pi-custom-models/)** (Models & providers) — Most practical guide to local models: working models.yml for each inference server, model roles and allowlists, plus two changes needed since omp 18.2.7. [details](docs/ecosystem.md#doug-custom-models)
+- **[Magic Context（cortexkit）](https://github.com/cortexkit/magic-context)** (Memory & context) — Cross-session memory and context management that detects omp, registers itself and turns off the built-in compaction. Good for long sessions. [details](docs/ecosystem.md#magic-context)
+- **[pi-automode](https://github.com/czottmann/pi-automode)** (Workflows & multi-agent) — Adds a Claude-Code-style auto mode: a chosen model decides which actions can proceed. Compare with omp's own approval-mode. [details](docs/ecosystem.md#pi-automode)
+- **[Current Agentic Development Environment：Orca + Oh My Pi](https://james-carr.org/posts/2026-09-30-current-agentic-development-setup-orca-oh-my-pi/)** (Articles, tutorials & discussions) — A concrete example of omp model roles (default, smol, slow, plan...) and which model fills each. [details](docs/ecosystem.md#james-carr-orca-omp)
+
+### Use another UI or embed omp
+
+- **[gooey-pi](https://github.com/am-will/gooey-pi)** (Desktop, web & mobile frontends) — One of the most-starred desktop frontends (Electron, cross-platform) for people who prefer a GUI; supports both Pi and omp. [details](docs/ecosystem.md#gooey-pi)
+- **[omp 文档：RPC 与 SDK](https://github.com/can1357/oh-my-pi/blob/main/docs/rpc.md)** (Official docs) — Two ways to embed omp: the Node SDK and stdio NDJSON RPC. Our offline tests use RPC to list commands and tools without calling a model. [details](docs/ecosystem.md#docs-rpc-sdk)
+
+### Community views and comparisons
+
+- **[Pi（earendil-works/pi，原 badlogic/pi-mono）](https://github.com/earendil-works/pi)** (Adjacent lists & projects) — omp's upstream. Explains the minimal-Pi vs batteries-included-omp split and which Pi packages carry over (see the compat matrix). [details](docs/ecosystem.md#earendil-pi)
+- **[Hacker News：Oh-my-pi – A coding agent with the IDE wired in](https://news.ycombinator.com/item?id=48994611)** (Articles, tutorials & discussions) — Real user voices: easy start and good search integration, but also worries about subscription OAuth bans and doubts about benchmarks. [details](docs/ecosystem.md#hn-launch)
+- **[Pi vs OMP (Oh My Pi Agent)：Everything You Need to Know（Composio）](https://composio.dev/content/pi-vs-omp)** (Articles, tutorials & discussions) — A rare side-by-side of Pi and omp for quick orientation. Vendor content; check claims against our compat matrix. [details](docs/ecosystem.md#composio-pi-vs-omp)
+- **[thevibeworks/awesome-pi-agent](https://github.com/thevibeworks/awesome-pi-agent)** (Adjacent lists & projects) — Hand-curated Pi ecosystem list where omp is one section. Go there for Pi-wide extensions, forks and frontends. [details](docs/ecosystem.md#thevibeworks-awesome-pi-agent)
+
+### Chinese readers
+
+- **[omp-docs-cn（非官方中文文档站）](https://github.com/Aieguu/omp-docs-cn)** (Chinese community) — Entry point for Chinese readers. Unofficial and may lag upstream; English docs/ win on conflicts. [details](docs/ecosystem.md#omp-docs-cn)
 <!-- END GENERATED: featured -->
 
 ## Common misconceptions
@@ -161,6 +178,30 @@ Full registry: [docs/ecosystem.md](docs/ecosystem.md).
 9. **Myth:** omp starts without any model configured.
    **Fact:** Without a default model omp exits ("No default model selected") and RPC never sends ready. For offline tests configure a dummy provider (examples/models.offline.yml). ([RUNLOG](https://github.com/hyeebeen/awesome-omp/blob/main/examples/RUNLOG.md))
 <!-- END GENERATED: misconceptions -->
+
+## What the community says
+
+Five comments from the [Hacker News launch thread](https://news.ycombinator.com/item?id=48994611) and later discussions, both for and against. All 8 are in [why.md](docs/why.md#社区声音) (Chinese). Identities are public usernames only; we have not checked anyone's background.
+
+| Stance | Who | What they said |
+|---|---|---|
+| For | [rurban](https://news.ycombinator.com/item?id=48995761) | "Currently the very best" |
+| For | [explodes](https://news.ycombinator.com/item?id=49022642) | Replaced OpenCode with it, paired with Z.ai; easy to start, like a power-user TUI agent |
+| Doubt | [localroast](https://news.ycombinator.com/item?id=49545358) | Many features but little evidence; hash-anchored edits make models spend more turns on repairs |
+| Doubt | [riedel](https://news.ycombinator.com/item?id=49546980) | No ablations, so it is hard to know what each feature contributes |
+| Concern | [hahn-kev](https://news.ycombinator.com/item?id=49007232) | With subscription OAuth, several providers say only official tools are allowed; worried about bans |
+
+## Origins
+
+Generated from [data/milestones.yml](data/milestones.yml); the full timeline is in [timeline.md](docs/timeline.md).
+
+<!-- BEGIN GENERATED: lore -->
+- **2025-12-31** · can1357/oh-my-pi repository created ([verified](https://api.github.com/repos/can1357/oh-my-pi))
+- **2026-01-03** · First GitHub release (v1.337.1) ([verified](https://github.com/can1357/oh-my-pi/releases/tag/v1.337.1))
+- **2026-02-12** · Author's post "The harness problem": changing only the edit tool (hashline) raised pass rates for 14 of 16 models (author's benchmark) ([self-claimed](https://blog.can.ac/2026/02/12/the-harness-problem/))
+- **2026-08-22** · v18.0.0 ([verified](https://github.com/can1357/oh-my-pi/releases/tag/v18.0.0))
+- **2026-09-02** · "The Harness Playbook": a retrospective on omp and the announced successor architecture omp² (extensions in Python) ([self-claimed](https://stencil.so/blog/harness-playbook))
+<!-- END GENERATED: lore -->
 
 ## Go deeper
 

@@ -214,6 +214,17 @@
             "string",
             "null"
           ]
+        },
+        "task": {
+          "enum": [
+            "understand",
+            "extend",
+            "models",
+            "embed",
+            "compare",
+            "zh"
+          ],
+          "description": "Reader task group for featured entries (README picks)."
         }
       },
       "allOf": [
@@ -229,7 +240,8 @@
             "required": [
               "why",
               "why_en",
-              "rank"
+              "rank",
+              "task"
             ],
             "properties": {
               "why": {
@@ -317,8 +329,34 @@
           "items": {
             "$ref": "#/$defs/source"
           }
+        },
+        "what_en": {
+          "type": "string"
+        },
+        "lore": {
+          "type": "boolean",
+          "description": "Show in the README 来历/Origins block."
         }
-      }
+      },
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "lore": {
+                "const": true
+              }
+            },
+            "required": [
+              "lore"
+            ]
+          },
+          "then": {
+            "required": [
+              "what_en"
+            ]
+          }
+        }
+      ]
     },
     "compat": {
       "type": "object",
