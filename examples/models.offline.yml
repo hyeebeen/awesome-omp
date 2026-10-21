@@ -1,0 +1,14 @@
+# Offline dummy provider: points at a closed local port, no API key.
+# Lets omp start (it refuses to start without a default model) without ever
+# reaching a real model. Copy to $HOME/.omp/agent/models.yml in the sandbox.
+providers:
+  offline-dummy:
+    baseUrl: http://127.0.0.1:9/v1
+    api: openai-completions
+    auth: none
+    models:
+      - id: dummy
+        name: Offline dummy (never called)
+        reasoning: false
+        input: [text]
+        cost: { input: 0, output: 0, cacheRead: 0, cacheWrite: 0 }

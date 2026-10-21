@@ -1,0 +1,11 @@
+{
+  "name": "awesome-omp-demo",
+  "owner": { "name": "awesome-omp" },
+  "plugins": [
+    {
+      "name": "hello-skill",
+      "source": "./plugins/hello-skill",
+      "description": "Minimal plugin with one skill"
+    }
+  ]
+}
