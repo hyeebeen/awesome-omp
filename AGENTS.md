@@ -36,6 +36,8 @@ scripts/metrics.py ──> data/metrics.json (stars, npm downloads; the ONLY pla
 | `sources[]` | First-hand links |
 | `verified_at` | YYYY-MM-DD (Asia/Shanghai) |
 | `featured`, `rank`, `why`, `why_en` | README picks (15–20, ranks 1..N; 1–3 = 「只看 3 条」) |
+| `task` | Featured only: README group (`understand`, `extend`, `models`, `embed`, `compare`, `zh`) |
+| milestones `lore`, `what_en` | `lore: true` puts a milestone in the README 来历 / Origins block; then `what_en` is required |
 
 ## Rules for edits
 
