@@ -1,0 +1,62 @@
+# Timeline. Dates are publish dates; release times converted to Asia/Shanghai date.
+milestones:
+- date: '2025-12-31'
+  version: null
+  what: can1357/oh-my-pi 仓库创建
+  evidence_type: verified
+  sources: [{url: "https://api.github.com/repos/can1357/oh-my-pi", label: repos API created_at}]
+- date: '2026-01-03'
+  version: v1.337.1
+  what: 第一个 GitHub release
+  evidence_type: verified
+  sources: [{url: "https://github.com/can1357/oh-my-pi/releases/tag/v1.337.1", label: null}]
+- date: '2026-02-12'
+  version: null
+  what: 作者发文《The harness problem》：只换编辑工具（hashline），16 个模型中 14 个通过率提高（作者基准）
+  evidence_type: self-claimed
+  sources: [{url: "https://blog.can.ac/2026/02/12/the-harness-problem/", label: null}]
+- date: '2026-02-13'
+  version: v12.0.0
+  what: 进入 v12（1–2 月主版本号几乎每周一升；v13 起约 1–1.5 个月一个主版本）
+  evidence_type: verified
+  sources: [{url: "https://github.com/can1357/oh-my-pi/releases/tag/v12.0.0", label: null}]
+- date: '2026-03-22'
+  version: null
+  what: porting-from-pi-mono.md 记录的最近一次上游同步点（commit b21b42d）
+  evidence_type: verified
+  sources: [{url: "https://github.com/can1357/oh-my-pi/blob/main/docs/porting-from-pi-mono.md", label: null}]
+- date: '2026-06-10'
+  version: null
+  what: 作者发文《Snapcompact》，介绍把上下文压成图片的压缩方案
+  evidence_type: self-claimed
+  sources: [{url: "https://blog.can.ac/2026/06/10/snapcompact/", label: null}]
+- date: '2026-07-13'
+  version: null
+  what: Stencil 博客《prewalk》：计划后的编辑交给便宜模型
+  evidence_type: self-claimed
+  sources: [{url: "https://stencil.so/blog/prewalk", label: null}]
+- date: '2026-07-22'
+  version: null
+  what: Hacker News「Oh-my-pi - A coding agent with the IDE wired in」（42 分，15 条评论，抓取于 2026-10-21）
+  evidence_type: verified
+  sources: [{url: "https://news.ycombinator.com/item?id=48994611", label: null}]
+- date: '2026-08-22'
+  version: v18.0.0
+  what: 进入 v18
+  evidence_type: verified
+  sources: [{url: "https://github.com/can1357/oh-my-pi/releases/tag/v18.0.0", label: null}]
+- date: '2026-09-02'
+  version: null
+  what: 《The Harness Playbook》：omp 复盘，并公布替代架构 omp²（部分已建，部分在做；扩展改用 Python）
+  evidence_type: self-claimed
+  sources: [{url: "https://stencil.so/blog/harness-playbook", label: null}]
+- date: '2026-10-09'
+  version: v18.8.7
+  what: 首次支持 OSC 7501 程序状态协议（详见 awesome-osc7501）
+  evidence_type: verified
+  sources: [{url: "https://github.com/can1357/oh-my-pi/releases/tag/v18.8.7", label: null}, {url: "https://github.com/hyeebeen/awesome-osc7501", label: awesome-osc7501}]
+- date: '2026-10-21'
+  version: v18.12.5
+  what: 本仓库核实时的最新 release
+  evidence_type: verified
+  sources: [{url: "https://github.com/can1357/oh-my-pi/releases/tag/v18.12.5", label: null}]

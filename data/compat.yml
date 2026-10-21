@@ -1,0 +1,93 @@
+# Pi vs omp compatibility. status: same|compatible|partial|different|omp-only|unknown
+# evidence_type: verified (docs/source) | tested (examples/RUNLOG.md) | inferred
+compat:
+- id: extension-api
+  item: 扩展模块形态 / Extension module shape
+  pi: TS 模块默认导出工厂，`import type { ExtensionAPI } from "@earendil-works/pi-coding-agent"`
+  omp: 同样是默认导出工厂，类型来自 `@oh-my-pi/pi-coding-agent`；`@mariozechner/*`、`@earendil-works/*` 作用域被别名到 omp 自己的包（PI_SCOPE_ALIASES）
+  status: compatible
+  evidence_type: verified
+  sources:
+  - {url: "https://github.com/earendil-works/pi/blob/main/packages/coding-agent/docs/extensions.md", label: Pi extensions.md}
+  - {url: "https://github.com/can1357/oh-my-pi/blob/main/docs/extensions.md", label: omp extensions.md}
+  - {url: "https://github.com/can1357/oh-my-pi/blob/main/packages/coding-agent/src/extensibility/plugins/legacy-pi-compat.ts", label: legacy-pi-compat.ts（PI_SCOPE_ALIASES）}
+- id: extension-dir
+  item: 扩展自动发现目录 / Auto-discovery directory
+  pi: '`~/.pi/agent/extensions/`、项目 `.pi/extensions/`'
+  omp: '`~/.omp/agent/extensions/`、项目 `.omp/extensions/`；`.pi/extensions` 不是原生发现目录'
+  status: different
+  evidence_type: verified
+  sources:
+  - {url: "https://github.com/earendil-works/pi/blob/main/packages/coding-agent/docs/extensions.md", label: Pi extensions.md}
+  - {url: "https://github.com/can1357/oh-my-pi/blob/main/docs/extension-loading.md", label: omp extension-loading.md}
+- id: npm-package-install
+  item: 安装 Pi 社区包 / Installing a Pi package from npm
+  pi: '`pi install npm:<pkg>`'
+  omp: '`omp install npm:<pkg>`；实测 pi-web-access 0.43.0 装上后 `web_search` 工具出现（未实际执行搜索）'
+  status: partial
+  evidence_type: tested
+  sources:
+  - {url: "https://github.com/earendil-works/pi/blob/main/packages/coding-agent/docs/packages.md", label: Pi packages.md}
+  - {url: "https://github.com/hyeebeen/awesome-omp/blob/main/examples/RUNLOG.md", label: RUNLOG 第 4 项}
+- id: package-manifest
+  item: 包清单字段 / Package manifest
+  pi: package.json `pi` 字段 + keyword `pi-package`
+  omp: 原生读 `omp.extensions`；仍接受旧的 `pi.extensions`
+  status: compatible
+  evidence_type: verified
+  sources:
+  - {url: "https://github.com/earendil-works/pi/blob/main/packages/coding-agent/docs/packages.md", label: Pi packages.md}
+  - {url: "https://github.com/can1357/oh-my-pi/blob/main/docs/extension-loading.md", label: omp extension-loading.md}
+- id: newer-pi-api
+  item: Pi 新版专有 API / APIs added in newer Pi
+  pi: 随 Pi 版本演进（例如 pi-web-access 提示的 Dynamic tool activation 需要 Pi 0.86.0+）
+  omp: 不保证有；实测 pi-web-access 自动降级为常驻工具
+  status: partial
+  evidence_type: tested
+  sources:
+  - {url: "https://github.com/hyeebeen/awesome-omp/blob/main/examples/RUNLOG.md", label: RUNLOG 第 4 项}
+- id: claude-plugins
+  item: Claude Code 插件市场 / Claude Code plugin marketplaces
+  pi: 无内置插件市场（用 npm/git 包分发）
+  omp: '`/marketplace`、`omp plugin`；读 `.omp-plugin/marketplace.json`，兜底 `.claude-plugin/marketplace.json`'
+  status: omp-only
+  evidence_type: tested
+  sources:
+  - {url: "https://github.com/can1357/oh-my-pi/blob/main/docs/marketplace.md", label: omp marketplace.md}
+  - {url: "https://github.com/hyeebeen/awesome-omp/blob/main/examples/RUNLOG.md", label: RUNLOG 第 2–3 项}
+- id: skills
+  item: Skills（SKILL.md）
+  pi: 支持（skills.md）
+  omp: 支持，另外自动读取 .claude/.cursor/.codex 等目录中已有的 skills 与规则
+  status: compatible
+  evidence_type: verified
+  sources:
+  - {url: "https://github.com/earendil-works/pi/blob/main/packages/coding-agent/docs/skills.md", label: Pi skills.md}
+  - {url: "https://github.com/can1357/oh-my-pi/blob/main/docs/skills.md", label: omp skills.md}
+  - {url: "https://github.com/can1357/oh-my-pi/blob/main/README.md", label: omp README「Discovery」}
+- id: themes
+  item: 主题 / Themes
+  pi: 有主题机制（themes.md）
+  omp: 有自己的主题文档（theme.md）；格式是否互通未实测
+  status: unknown
+  evidence_type: inferred
+  sources:
+  - {url: "https://github.com/earendil-works/pi/blob/main/packages/coding-agent/docs/themes.md", label: Pi themes.md}
+  - {url: "https://github.com/can1357/oh-my-pi/blob/main/docs/theme.md", label: omp theme.md}
+- id: config-dir
+  item: 配置根目录 / Config root
+  pi: '`~/.pi/agent`'
+  omp: '`~/.omp/agent`（可用 `--profile`、XDG 改位置）'
+  status: different
+  evidence_type: verified
+  sources:
+  - {url: "https://github.com/can1357/oh-my-pi/blob/main/docs/config-usage.md", label: omp config-usage.md}
+  - {url: "https://github.com/earendil-works/pi/blob/main/packages/coding-agent/docs/settings.md", label: Pi settings.md}
+- id: upstream-sync
+  item: 代码同步 / Upstream sync
+  pi: 上游
+  omp: 手工移植；文档记录的上次同步点为 2026-03-22（上游 commit b21b42d）
+  status: different
+  evidence_type: verified
+  sources:
+  - {url: "https://github.com/can1357/oh-my-pi/blob/main/docs/porting-from-pi-mono.md", label: porting-from-pi-mono.md}

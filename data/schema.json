@@ -1,0 +1,372 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/hyeebeen/awesome-omp/data/schema.json",
+  "title": "awesome-omp data",
+  "type": "object",
+  "required": [
+    "entries"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "entries": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/entry"
+      }
+    },
+    "misconceptions": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/misconception"
+      }
+    },
+    "milestones": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/milestone"
+      }
+    },
+    "compat": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/compat"
+      }
+    }
+  },
+  "$defs": {
+    "source": {
+      "type": "object",
+      "required": [
+        "url"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "url": {
+          "type": "string",
+          "minLength": 4
+        },
+        "label": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      }
+    },
+    "date": {
+      "type": "string",
+      "pattern": "^20[0-9]{2}-[01][0-9]-[0-3][0-9]$"
+    },
+    "evidence_type": {
+      "enum": [
+        "verified",
+        "self-claimed",
+        "tested",
+        "inferred"
+      ]
+    },
+    "entry": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "name",
+        "url",
+        "category",
+        "kind",
+        "omp_support",
+        "evidence_type",
+        "evidence",
+        "sources",
+        "verified_at",
+        "featured"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^[a-z0-9][a-z0-9-]*$"
+        },
+        "aliases": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "name": {
+          "type": "string"
+        },
+        "url": {
+          "type": "string",
+          "pattern": "^https://"
+        },
+        "category": {
+          "enum": [
+            "core",
+            "doc",
+            "extension",
+            "plugin",
+            "marketplace",
+            "skill",
+            "theme",
+            "provider",
+            "mcp-lsp-dap",
+            "frontend",
+            "editor",
+            "workflow",
+            "memory",
+            "learning",
+            "zh",
+            "adjacent"
+          ]
+        },
+        "kind": {
+          "enum": [
+            "repo",
+            "npm",
+            "doc",
+            "article",
+            "video",
+            "site",
+            "discussion"
+          ]
+        },
+        "repo": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "pattern": "^[A-Za-z0-9_.-]+/[A-Za-z0-9_.-]+$"
+        },
+        "npm": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "omp_support": {
+          "enum": [
+            "native",
+            "declared",
+            "pi-compat-tested",
+            "pi-compat-unverified",
+            "about",
+            "unsupported",
+            "unknown"
+          ]
+        },
+        "evidence_type": {
+          "$ref": "#/$defs/evidence_type"
+        },
+        "evidence": {
+          "type": "string",
+          "minLength": 3
+        },
+        "sources": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "$ref": "#/$defs/source"
+          }
+        },
+        "published": {
+          "$ref": "#/$defs/date"
+        },
+        "author": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "lang": {
+          "type": "array",
+          "items": {
+            "enum": [
+              "en",
+              "zh",
+              "other"
+            ]
+          }
+        },
+        "verified_at": {
+          "$ref": "#/$defs/date"
+        },
+        "featured": {
+          "type": "boolean"
+        },
+        "rank": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "why": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "why_en": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "summary": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      },
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "featured": {
+                "const": true
+              }
+            }
+          },
+          "then": {
+            "required": [
+              "why",
+              "why_en",
+              "rank"
+            ],
+            "properties": {
+              "why": {
+                "type": "string",
+                "minLength": 10
+              },
+              "why_en": {
+                "type": "string",
+                "minLength": 10
+              }
+            }
+          }
+        }
+      ]
+    },
+    "misconception": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "myth",
+        "fact",
+        "myth_en",
+        "fact_en",
+        "sources",
+        "evidence_type"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^[a-z0-9-]+$"
+        },
+        "myth": {
+          "type": "string"
+        },
+        "fact": {
+          "type": "string"
+        },
+        "myth_en": {
+          "type": "string"
+        },
+        "fact_en": {
+          "type": "string"
+        },
+        "evidence_type": {
+          "$ref": "#/$defs/evidence_type"
+        },
+        "sources": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "$ref": "#/$defs/source"
+          }
+        }
+      }
+    },
+    "milestone": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "date",
+        "what",
+        "sources",
+        "evidence_type"
+      ],
+      "properties": {
+        "date": {
+          "$ref": "#/$defs/date"
+        },
+        "version": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "what": {
+          "type": "string"
+        },
+        "evidence_type": {
+          "$ref": "#/$defs/evidence_type"
+        },
+        "sources": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "$ref": "#/$defs/source"
+          }
+        }
+      }
+    },
+    "compat": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "item",
+        "pi",
+        "omp",
+        "status",
+        "evidence_type",
+        "sources"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^[a-z0-9-]+$"
+        },
+        "item": {
+          "type": "string"
+        },
+        "pi": {
+          "type": "string"
+        },
+        "omp": {
+          "type": "string"
+        },
+        "status": {
+          "enum": [
+            "same",
+            "compatible",
+            "partial",
+            "different",
+            "omp-only",
+            "unknown"
+          ]
+        },
+        "evidence_type": {
+          "$ref": "#/$defs/evidence_type"
+        },
+        "sources": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "$ref": "#/$defs/source"
+          }
+        }
+      }
+    }
+  }
+}

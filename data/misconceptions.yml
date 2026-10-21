@@ -1,0 +1,78 @@
+misconceptions:
+- id: not-oh-my-posh
+  myth: 搜到的 `*.omp.json` 主题就是 omp 的主题。
+  fact: '`*.omp.json` 是 shell 提示符工具 oh-my-posh 的主题文件后缀，和 omp（oh-my-pi）无关。omp 的主题见 docs/theme.md。'
+  myth_en: "`*.omp.json` theme files are omp themes."
+  fact_en: "`*.omp.json` is the theme suffix of oh-my-posh, a shell prompt renderer. omp themes are documented in docs/theme.md."
+  evidence_type: verified
+  sources:
+  - {url: "https://github.com/JanDeDobbeleer/oh-my-posh/tree/main/themes", label: oh-my-posh themes/}
+  - {url: "https://github.com/can1357/oh-my-pi/blob/main/docs/theme.md", label: omp theme.md}
+- id: npm-name
+  myth: npm 上的 `oh-my-pi` 包就是 omp。
+  fact: 那是另一个作者（acidsugarx）给 Pi 做的编排包。omp 的 npm 包是 `@oh-my-pi/pi-coding-agent`，命令名 `omp`。
+  myth_en: "The npm package `oh-my-pi` is omp."
+  fact_en: "That package is an unrelated Pi add-on by acidsugarx. omp ships as `@oh-my-pi/pi-coding-agent` with the `omp` binary."
+  evidence_type: verified
+  sources:
+  - {url: "https://www.npmjs.com/package/oh-my-pi", label: npm oh-my-pi}
+  - {url: "https://www.npmjs.com/package/@oh-my-pi/pi-coding-agent", label: npm @oh-my-pi/pi-coding-agent}
+- id: fork-tracks-upstream
+  myth: omp 是 Pi 的 GitHub fork，会自动跟上 Pi 的新功能。
+  fact: can1357/oh-my-pi 在 GitHub 上不是 fork，版本号独立（omp v18 对 Pi v1）。上游改动靠手工移植，文档记录的最近同步点是 2026-03-22。
+  myth_en: omp is a GitHub fork of Pi and follows Pi features automatically.
+  fact_en: The repo is not a GitHub fork and versions independently. Upstream changes are ported by hand; the documented last sync point is 2026-03-22.
+  evidence_type: verified
+  sources:
+  - {url: "https://api.github.com/repos/can1357/oh-my-pi", label: "repos API (fork: false)"}
+  - {url: "https://github.com/can1357/oh-my-pi/blob/main/docs/porting-from-pi-mono.md", label: porting-from-pi-mono.md}
+- id: pi-packages-just-work
+  myth: Pi 的扩展包在 omp 上都能直接用。
+  fact: omp 把 `@mariozechner/*`、`@earendil-works/*` 导入别名到自己的包，`omp install npm:<pkg>` 也能装 Pi 包，但发现目录不同（`.omp/` 而非 `.pi/`），Pi 新版 API 不一定有。实测 pi-web-access 能加载，但关闭了需要 Pi 0.86+ 的功能。要逐个验证。
+  myth_en: Every Pi extension works on omp unchanged.
+  fact_en: "omp aliases `@mariozechner/*` and `@earendil-works/*` imports and `omp install npm:<pkg>` installs Pi packages, but discovery dirs differ and newer Pi APIs may be missing. Our test: pi-web-access loads but disables a feature that needs Pi 0.86+. Verify per package."
+  evidence_type: tested
+  sources:
+  - {url: "https://github.com/can1357/oh-my-pi/blob/main/packages/coding-agent/src/extensibility/plugins/legacy-pi-compat.ts", label: legacy-pi-compat.ts}
+  - {url: "https://github.com/hyeebeen/awesome-omp/blob/main/examples/RUNLOG.md", label: RUNLOG}
+- id: hashline-always-wins
+  myth: hashline 编辑对所有模型都更好。
+  fact: 作者自己的基准里 16 个模型中 14 个优于 patch，DeepSeek V3.2 和 GPT-5.2 Codex 反而下降；HN 上也有用户说实际使用中模型花很多轮修复坏掉的锚点编辑。这是自述基准，没有第三方复现。
+  myth_en: Hashline edits beat other formats for every model.
+  fact_en: "In the author's own benchmark hashline beat patch in 14 of 16 models; DeepSeek V3.2 and GPT-5.2 Codex got worse. An HN user reports models spending many turns repairing broken anchored edits. No third-party replication found."
+  evidence_type: self-claimed
+  sources:
+  - {url: "https://blog.can.ac/2026/02/12/the-harness-problem/", label: The harness problem}
+  - {url: "https://news.ycombinator.com/item?id=49545358", label: HN 评论（localroast）}
+- id: repo-open-is-safe
+  myth: 用 omp 打开一个陌生仓库只是读代码，不会执行什么。
+  fact: omp 按设计会加载项目内的 settings、extensions、hooks、tools、commands、skills、rules 和项目 MCP 配置。打开不可信仓库前用 `--no-extensions`、`--trusted-extension` 或 `--config` 覆盖收窄输入。
+  myth_en: Opening an untrusted repo in omp only reads code.
+  fact_en: "By design omp loads the project's settings, extensions, hooks, tools, commands, skills, rules and project MCP config. Narrow inputs with `--no-extensions`, `--trusted-extension` or a `--config` overlay."
+  evidence_type: verified
+  sources:
+  - {url: "https://github.com/can1357/oh-my-pi/blob/main/README.md#project-inputs-and-trust", label: README「Project inputs and trust」}
+- id: readme-numbers
+  myth: README 里的「60+ providers、31 个内置工具」和跑分是独立测出来的事实。
+  fact: 这些都是项目自述，随版本变化；跑分来自作者自己的基准。引用时要标「自述」并链原文。
+  myth_en: The README's provider/tool counts and benchmark numbers are independent facts.
+  fact_en: They are the project's own claims and change between releases; benchmarks are the author's own. Cite them as self-claimed.
+  evidence_type: verified
+  sources:
+  - {url: "https://github.com/can1357/oh-my-pi/blob/main/README.md", label: omp README}
+- id: extension-api-stable
+  myth: omp 的 TypeScript 扩展 API 是长期稳定的平台。
+  fact: 作者在《The Harness Playbook》里说当前设计把复杂度推给扩展，难以在上面写可靠软件，并公布替代架构 omp²，其中扩展改用 Python。omp² 何时发布未公布，属作者计划。
+  myth_en: omp's TypeScript extension API is a stable long-term platform.
+  fact_en: "In The Harness Playbook the author says the current design pushes complexity onto extensions and announces omp², whose extensions use Python. No release date is given; this is a stated plan."
+  evidence_type: self-claimed
+  sources:
+  - {url: "https://stencil.so/blog/harness-playbook", label: The Harness Playbook}
+- id: runs-without-model
+  myth: 不配模型也能先启动 omp 看看扩展。
+  fact: 没有默认模型时 omp 直接退出（「No default model selected」），RPC 也不发 ready。离线测试要配一个指向本地空端口的假 provider（见 examples/models.offline.yml）。
+  myth_en: omp starts without any model configured.
+  fact_en: "Without a default model omp exits (\"No default model selected\") and RPC never sends ready. For offline tests configure a dummy provider (examples/models.offline.yml)."
+  evidence_type: tested
+  sources:
+  - {url: "https://github.com/hyeebeen/awesome-omp/blob/main/examples/RUNLOG.md", label: RUNLOG}
