@@ -6,3 +6,6 @@ lychee/
 research/raw/*
 !research/raw/candidates-*.json
 !research/raw/*.log
+
+# raw collection output (regenerate with scripts/collect.py; not published)
+research/raw/
