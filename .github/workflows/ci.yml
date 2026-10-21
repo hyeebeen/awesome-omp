@@ -1,0 +1,26 @@
+# CI — same steps as `sh scripts/check.sh` (mermaid render included).
+name: CI
+on:
+  push:
+    branches: [main]
+  pull_request:
+permissions:
+  contents: read
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.13'
+      - uses: actions/setup-node@v6
+        with:
+          node-version: '22'
+      - run: pip install pyyaml jsonschema
+      - run: npm install -g markdownlint-cli2 @mermaid-js/mermaid-cli
+        env:
+          PUPPETEER_SKIP_DOWNLOAD: "1"
+      - run: MMDC=mmdc sh scripts/check.sh
+        env:
+          PUPPETEER_EXECUTABLE_PATH: /usr/bin/google-chrome

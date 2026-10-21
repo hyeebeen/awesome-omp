@@ -2,3 +2,7 @@ __pycache__/
 node_modules/
 lychee/
 /preview/
+# raw research downloads stay local (third-party content); only candidates + logs are committed
+research/raw/*
+!research/raw/candidates-*.json
+!research/raw/*.log

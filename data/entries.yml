@@ -3187,7 +3187,7 @@ entries:
   url: https://www.npmjs.com/package/@polderlabs/bizar-omp
   category: workflow
   kind: npm
-  repo: PolderLabs/BizarHarness-OMP
+  repo: null
   npm: '@polderlabs/bizar-omp'
   omp_support: declared
   evidence_type: self-claimed
@@ -3196,8 +3196,6 @@ entries:
   sources:
   - url: https://www.npmjs.com/package/@polderlabs/bizar-omp
     label: npm
-  - url: https://github.com/PolderLabs/BizarHarness-OMP
-    label: source
   verified_at: '2026-10-21'
   featured: false
 - id: ompchamber
@@ -3313,7 +3311,7 @@ entries:
   url: https://www.npmjs.com/package/@ngockhoale/ukit
   category: skill
   kind: npm
-  repo: lengockhoa/UKit
+  repo: null
   npm: '@ngockhoale/ukit'
   omp_support: declared
   evidence_type: self-claimed
@@ -3322,8 +3320,6 @@ entries:
   sources:
   - url: https://www.npmjs.com/package/@ngockhoale/ukit
     label: npm
-  - url: https://github.com/lengockhoa/UKit
-    label: source
   verified_at: '2026-10-21'
   featured: false
 - id: 37chengshan-ompweb
@@ -4139,7 +4135,7 @@ entries:
   url: https://www.npmjs.com/package/@r1z4x/tezgah
   category: extension
   kind: npm
-  repo: r1z4x/tezgah
+  repo: null
   npm: '@r1z4x/tezgah'
   omp_support: declared
   evidence_type: self-claimed
@@ -4148,8 +4144,6 @@ entries:
   sources:
   - url: https://www.npmjs.com/package/@r1z4x/tezgah
     label: npm
-  - url: https://github.com/r1z4x/tezgah
-    label: source
   verified_at: '2026-10-21'
   featured: false
 - id: omp-markdown-export
@@ -4529,7 +4523,7 @@ entries:
   url: https://www.npmjs.com/package/@ryanskidmore/tokenomics
   category: extension
   kind: npm
-  repo: ryanskidmore/tokenomics
+  repo: null
   npm: '@ryanskidmore/tokenomics'
   omp_support: declared
   evidence_type: self-claimed
@@ -4538,8 +4532,6 @@ entries:
   sources:
   - url: https://www.npmjs.com/package/@ryanskidmore/tokenomics
     label: npm
-  - url: https://github.com/ryanskidmore/tokenomics
-    label: source
   verified_at: '2026-10-21'
   featured: false
 - id: tickernelz-dinotty-omp
@@ -4565,7 +4557,7 @@ entries:
   url: https://www.npmjs.com/package/@openadapter/koda-hashline
   category: memory
   kind: npm
-  repo: claraverse-space/koda
+  repo: null
   npm: '@openadapter/koda-hashline'
   omp_support: declared
   evidence_type: self-claimed
@@ -4574,8 +4566,6 @@ entries:
   sources:
   - url: https://www.npmjs.com/package/@openadapter/koda-hashline
     label: npm
-  - url: https://github.com/claraverse-space/koda
-    label: source
   verified_at: '2026-10-21'
   featured: false
 - id: hy-sde-org-dsh-fs-archive
@@ -5165,7 +5155,7 @@ entries:
   url: https://www.npmjs.com/package/super-dsh
   category: frontend
   kind: npm
-  repo: pgmi-builds/super-dsh
+  repo: null
   npm: super-dsh
   omp_support: declared
   evidence_type: self-claimed
@@ -5174,8 +5164,6 @@ entries:
   sources:
   - url: https://www.npmjs.com/package/super-dsh
     label: npm
-  - url: https://github.com/pgmi-builds/super-dsh
-    label: source
   verified_at: '2026-10-21'
   featured: false
 - id: omp-jev-auto-approve
@@ -5325,7 +5313,7 @@ entries:
   url: https://www.npmjs.com/package/@q5m-ai/cli
   category: extension
   kind: npm
-  repo: q5m-ai/q5m
+  repo: null
   npm: '@q5m-ai/cli'
   omp_support: declared
   evidence_type: self-claimed
@@ -5334,8 +5322,6 @@ entries:
   sources:
   - url: https://www.npmjs.com/package/@q5m-ai/cli
     label: npm
-  - url: https://github.com/q5m-ai/q5m
-    label: source
   verified_at: '2026-10-21'
   featured: false
 - id: omp-webdav-sync
@@ -5487,7 +5473,7 @@ entries:
   url: https://www.npmjs.com/package/intuition-pi
   category: memory
   kind: npm
-  repo: Shixuuu/intuition
+  repo: null
   npm: intuition-pi
   omp_support: declared
   evidence_type: self-claimed
@@ -5496,8 +5482,6 @@ entries:
   sources:
   - url: https://www.npmjs.com/package/intuition-pi
     label: npm
-  - url: https://github.com/Shixuuu/intuition
-    label: source
   verified_at: '2026-10-21'
   featured: false
 - id: jvsteiner-agent-rules
@@ -5685,7 +5669,7 @@ entries:
   url: https://www.npmjs.com/package/@retaw106/mmc-pi
   category: memory
   kind: npm
-  repo: retaw106/moon-magic-context
+  repo: null
   npm: '@retaw106/mmc-pi'
   omp_support: declared
   evidence_type: self-claimed
@@ -5694,8 +5678,6 @@ entries:
   sources:
   - url: https://www.npmjs.com/package/@retaw106/mmc-pi
     label: npm
-  - url: https://github.com/retaw106/moon-magic-context
-    label: source
   verified_at: '2026-10-21'
   featured: false
 - id: omp-settings-ko
@@ -5721,7 +5703,7 @@ entries:
   url: https://www.npmjs.com/package/omp-conductor
   category: workflow
   kind: npm
-  repo: TerrifiedBug/conductor
+  repo: null
   npm: omp-conductor
   omp_support: declared
   evidence_type: self-claimed
@@ -5730,8 +5712,6 @@ entries:
   sources:
   - url: https://www.npmjs.com/package/omp-conductor
     label: npm
-  - url: https://github.com/TerrifiedBug/conductor
-    label: source
   verified_at: '2026-10-21'
   featured: false
 - id: research-workflow
@@ -5955,7 +5935,7 @@ entries:
   url: https://www.npmjs.com/package/mostcracked
   category: theme
   kind: npm
-  repo: codiejay/cc-rank
+  repo: null
   npm: mostcracked
   omp_support: declared
   evidence_type: self-claimed
@@ -5964,8 +5944,6 @@ entries:
   sources:
   - url: https://www.npmjs.com/package/mostcracked
     label: npm
-  - url: https://github.com/codiejay/cc-rank
-    label: source
   verified_at: '2026-10-21'
   featured: false
 - id: ocpipe
@@ -6045,7 +6023,7 @@ entries:
   url: https://www.npmjs.com/package/@genee/omp-whip
   category: workflow
   kind: npm
-  repo: iamfat/genee-teams
+  repo: null
   npm: '@genee/omp-whip'
   omp_support: declared
   evidence_type: self-claimed
@@ -6054,8 +6032,6 @@ entries:
   sources:
   - url: https://www.npmjs.com/package/@genee/omp-whip
     label: npm
-  - url: https://github.com/iamfat/genee-teams
-    label: source
   verified_at: '2026-10-21'
   featured: false
 - id: omp-provider-hepai
@@ -6417,7 +6393,7 @@ entries:
   url: https://www.npmjs.com/package/@d-ai/omp
   category: provider
   kind: npm
-  repo: mdddj/dd_server_rust_private
+  repo: null
   npm: '@d-ai/omp'
   omp_support: declared
   evidence_type: self-claimed
@@ -6426,8 +6402,6 @@ entries:
   sources:
   - url: https://www.npmjs.com/package/@d-ai/omp
     label: npm
-  - url: https://github.com/mdddj/dd_server_rust_private
-    label: source
   verified_at: '2026-10-21'
   featured: false
 - id: dzhi-oomph

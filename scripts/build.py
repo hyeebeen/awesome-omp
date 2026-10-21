@@ -51,7 +51,9 @@ EVID = {"verified": "已验证", "self-claimed": "自述", "tested": "实测", "
 
 
 def esc(s):
-    return (s or "").replace("|", "\\|").replace("\n", " ").strip()
+    s = re.sub(r"!\[[^\]]*\]\([^)]*\)|</?(?:img|a|p|br|div|h[1-6]|picture|source|span|b|strong|em|sub|sup|details|summary|code|kbd|table|tr|td|th|center)\b[^>]*>", " ", s or "")
+    s = re.sub(r"\s+", " ", s.replace("|", "\\|")).strip()
+    return re.sub(r"(?<![(<])(https?://[^\s)）]+)", r"<\1>", s)
 
 
 def metric(e, m):
@@ -94,8 +96,8 @@ def ecosystem(d, m):
             desc = e.get("why") or e.get("summary") or ""
             ev = f"{EVID[e['evidence_type']]}：{e['evidence']}"
             src = " ".join(f"[{i + 1}]({s['url']})" for i, s in enumerate(e["sources"]))
-            out.append(f'| <a id="{e["id"]}"></a>[{esc(e["name"])}]({e["url"]}){star} | {esc(desc)[:200]} | '
-                       f'{SUPPORT[e["omp_support"]][0]} | {esc(ev)[:220]} {src} | {metric(e, m)} | {e["verified_at"]} |')
+            out.append(f'| <a id="{e["id"]}"></a>[{esc(e["name"])}]({e["url"]}){star} | {esc(desc[:200])} | '
+                       f'{SUPPORT[e["omp_support"]][0]} | {esc(ev[:220])} {src} | {metric(e, m)} | {e["verified_at"]} |')
         out.append("")
     out += ["## omp 支持的含义", ""]
     out += [f"- **{z}**（`{k}`）：{en}" for k, (z, en) in SUPPORT.items()]

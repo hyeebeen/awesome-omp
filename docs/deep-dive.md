@@ -60,8 +60,8 @@ sequenceDiagram
   participant F as 文件
   M->>H: read hello.js
   H->>F: 读取
-  H-->>M: 1:a3 |function hello() {<br/>2:f1 |  return "world";<br/>3:0e |}
-  M->>H: edit: replace 2:f1 → return "omp";
+  H-->>M: 1:a3 #124;function hello() #123;<br/>2:f1 #124;  return "world"#59;<br/>3:0e #124;#125;
+  M->>H: edit: replace 2:f1 → return "omp"
   H->>F: 重新计算第 2 行哈希
   alt 哈希一致
     H->>F: 写入

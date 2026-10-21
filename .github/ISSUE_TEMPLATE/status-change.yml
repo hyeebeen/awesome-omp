@@ -1,0 +1,13 @@
+name: Status change / correction
+description: An entry is wrong, stale, archived, renamed, or its omp support changed
+title: "[status] "
+labels: [status-change]
+body:
+  - type: input
+    id: id
+    attributes: {label: Entry id (anchor in docs/ecosystem.md)}
+    validations: {required: true}
+  - type: textarea
+    id: change
+    attributes: {label: What changed, description: "Link a first-hand source: release, commit, README, maintainer comment."}
+    validations: {required: true}

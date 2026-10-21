@@ -1,0 +1,35 @@
+name: New entry
+description: Propose an omp extension, plugin, frontend, article or other resource
+title: "[new-entry] "
+labels: [new-entry]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Check docs/ecosystem.md first. omp = can1357/oh-my-pi (not oh-my-posh).
+        We need positive evidence of omp support: a README/description line, docs, code, or a reproducible test.
+        Marketing pages and AI-generated summaries are not evidence. Field definitions: AGENTS.md.
+  - type: input
+    id: url
+    attributes: {label: URL, placeholder: "https://github.com/OWNER/REPO"}
+    validations: {required: true}
+  - type: dropdown
+    id: category
+    attributes:
+      label: Category
+      options: [extension, plugin, marketplace, skill, theme, provider, mcp-lsp-dap, memory, frontend, editor, workflow, learning, zh, adjacent, doc]
+    validations: {required: true}
+  - type: textarea
+    id: evidence
+    attributes: {label: Evidence of omp support, description: "Quote the line and link it. Say if you tested it (omp version)."}
+    validations: {required: true}
+  - type: textarea
+    id: why
+    attributes: {label: Why it is worth reading (one sentence)}
+  - type: checkboxes
+    id: policy
+    attributes:
+      label: Policy
+      options:
+        - label: I am not the author, or I disclose that I am.
+        - label: If AI helped write this, a human checked every claim against the source.

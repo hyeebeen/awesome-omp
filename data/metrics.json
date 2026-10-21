@@ -1,0 +1,1941 @@
+{
+ "fetched_at": "2026-10-21 11:59",
+ "items": {
+  "37chengshan-ompweb": {
+   "stars": 7,
+   "archived": false,
+   "pushed_at": "2026-09-05",
+   "npm_monthly": 890
+  },
+  "a5c-ai-atlas-omp": {
+   "stars": 0,
+   "archived": false,
+   "pushed_at": "2026-08-10",
+   "npm_monthly": 642
+  },
+  "a5c-ai-babysitter-omp": {
+   "stars": 3,
+   "archived": false,
+   "pushed_at": "2026-08-10",
+   "npm_monthly": 4177
+  },
+  "a5c-ai-hooks-adapter-oh-my-pi": {
+   "stars": 1860,
+   "archived": false,
+   "pushed_at": "2026-09-16",
+   "npm_monthly": 1382
+  },
+  "acpio": {
+   "stars": 2,
+   "archived": false,
+   "pushed_at": "2026-10-20",
+   "npm_monthly": 477
+  },
+  "agent-collective": {
+   "stars": 2,
+   "archived": false,
+   "pushed_at": "2026-10-19",
+   "npm_monthly": 4679
+  },
+  "agent-config": {
+   "stars": 5,
+   "archived": false,
+   "pushed_at": "2026-10-19"
+  },
+  "agent-distro": {
+   "stars": 8,
+   "archived": false,
+   "pushed_at": "2026-10-21"
+  },
+  "agent-jail": {
+   "stars": 7,
+   "archived": false,
+   "pushed_at": "2026-08-10"
+  },
+  "agent-notify": {
+   "stars": 131,
+   "archived": false,
+   "pushed_at": "2026-10-07",
+   "npm_monthly": 662
+  },
+  "agent-orchestr": {
+   "stars": 18,
+   "archived": false,
+   "pushed_at": "2026-10-09"
+  },
+  "agent-playtime": {
+   "stars": 0,
+   "archived": false,
+   "pushed_at": "2026-10-08",
+   "npm_monthly": 607
+  },
+  "agent-skills": {
+   "stars": 15,
+   "archived": false,
+   "pushed_at": "2026-08-28"
+  },
+  "agentctxsync": {
+   "stars": 25,
+   "archived": false,
+   "pushed_at": "2026-10-17"
+  },
+  "agentdrop": {
+   "stars": 10,
+   "archived": false,
+   "pushed_at": "2026-10-15"
+  },
+  "agentrecap": {
+   "stars": 6,
+   "archived": false,
+   "pushed_at": "2026-10-13",
+   "npm_monthly": 790
+  },
+  "agentsw": {
+   "stars": 1,
+   "archived": false,
+   "pushed_at": "2026-10-13",
+   "npm_monthly": 1117
+  },
+  "agntn-tools": {
+   "stars": 2,
+   "archived": false,
+   "pushed_at": "2026-10-21",
+   "npm_monthly": 3268
+  },
+  "agrep-cli": {
+   "stars": 0,
+   "archived": false,
+   "pushed_at": "2026-10-21",
+   "npm_monthly": 514
+  },
+  "ahrzb-omp-model-presets": {
+   "stars": 2,
+   "archived": false,
+   "pushed_at": "2026-10-07",
+   "npm_monthly": 571
+  },
+  "ai-project-template": {
+   "stars": 7,
+   "archived": false,
+   "pushed_at": "2026-05-12"
+  },
+  "antigravity-masking-sidecar": {
+   "stars": 18,
+   "archived": false,
+   "pushed_at": "2026-09-22"
+  },
+  "aseprite-ai-artist": {
+   "stars": 436,
+   "archived": false,
+   "pushed_at": "2026-10-18",
+   "npm_monthly": 4283
+  },
+  "ashwin-shopify-oh-my-pi": {
+   "stars": 7,
+   "archived": false,
+   "pushed_at": "2026-05-01"
+  },
+  "auto-model-router": {
+   "stars": 7,
+   "archived": false,
+   "pushed_at": "2026-09-19",
+   "npm_monthly": 1726
+  },
+  "av-marketplace": {
+   "stars": 10,
+   "archived": false,
+   "pushed_at": "2026-10-20"
+  },
+  "awesome-ai-plugins": {
+   "stars": 808,
+   "archived": false,
+   "pushed_at": "2026-10-20"
+  },
+  "awesome-copilot-id": {
+   "stars": 84,
+   "archived": false,
+   "pushed_at": "2026-10-20"
+  },
+  "awesome-osc7501": {
+   "stars": 0,
+   "archived": false,
+   "pushed_at": "2026-10-21"
+  },
+  "bb-plugin-advisor": {
+   "stars": 9,
+   "archived": false,
+   "pushed_at": "2026-09-15"
+  },
+  "better-compact": {
+   "stars": 16,
+   "archived": false,
+   "pushed_at": "2026-10-12",
+   "npm_monthly": 280
+  },
+  "better-custom": {
+   "stars": 17,
+   "archived": false,
+   "pushed_at": "2026-09-05",
+   "npm_monthly": 683
+  },
+  "better-custom-provider": {
+   "stars": 8,
+   "archived": false,
+   "pushed_at": "2026-09-30",
+   "npm_monthly": 1289
+  },
+  "billion-context-omp": {
+   "stars": 5,
+   "archived": true,
+   "pushed_at": "2026-08-25",
+   "npm_monthly": 417
+  },
+  "boonlai-pi-view": {
+   "stars": 4,
+   "archived": false,
+   "pushed_at": "2026-10-20",
+   "npm_monthly": 790
+  },
+  "bopstack-pi-codegraph": {
+   "stars": 0,
+   "archived": false,
+   "pushed_at": "2026-07-24",
+   "npm_monthly": 1544
+  },
+  "bordr": {
+   "stars": 5,
+   "archived": false,
+   "pushed_at": "2026-10-20"
+  },
+  "bro-claude": {
+   "stars": 7,
+   "archived": false,
+   "pushed_at": "2026-10-18",
+   "npm_monthly": 456
+  },
+  "bubbleptr-awesome-pi": {
+   "stars": 141,
+   "archived": false,
+   "pushed_at": "2026-10-19"
+  },
+  "buildingthefuture-harnext": {
+   "stars": 0,
+   "archived": false,
+   "pushed_at": "2026-10-16",
+   "npm_monthly": 1477
+  },
+  "caichengle-omp-feishu-lark": {
+   "stars": 2,
+   "archived": false,
+   "pushed_at": "2026-09-21",
+   "npm_monthly": 849
+  },
+  "captain-miao": {
+   "stars": 43,
+   "archived": false,
+   "pushed_at": "2026-10-21"
+  },
+  "carterlasalle-omp-scc": {
+   "stars": 1,
+   "archived": false,
+   "pushed_at": "2026-10-10",
+   "npm_monthly": 698
+  },
+  "ceetrix": {
+   "stars": 1,
+   "archived": false,
+   "pushed_at": "2026-10-17",
+   "npm_monthly": 492
+  },
+  "cerebral-work-skills": {
+   "npm_monthly": 499
+  },
+  "chappie": {
+   "stars": 12,
+   "archived": false,
+   "pushed_at": "2026-09-29"
+  },
+  "chronova-pi-plugin": {
+   "stars": 0,
+   "archived": false,
+   "pushed_at": "2026-10-20",
+   "npm_monthly": 504
+  },
+  "claude-memory-mcp": {
+   "stars": 69,
+   "archived": false,
+   "pushed_at": "2026-09-26"
+  },
+  "claude-plugins-official": {
+   "stars": 43437,
+   "archived": false,
+   "pushed_at": "2026-10-21"
+  },
+  "codedeck": {
+   "stars": 0,
+   "archived": false,
+   "pushed_at": "2026-10-02",
+   "npm_monthly": 988
+  },
+  "codesafe-pi": {
+   "stars": 2,
+   "archived": false,
+   "pushed_at": "2026-09-23",
+   "npm_monthly": 369
+  },
+  "codex-pooler": {
+   "stars": 233,
+   "archived": false,
+   "pushed_at": "2026-10-21"
+  },
+  "cover": {
+   "stars": 57,
+   "archived": false,
+   "pushed_at": "2026-10-08",
+   "npm_monthly": 244
+  },
+  "cratylus": {
+   "stars": 0,
+   "archived": false,
+   "pushed_at": "2026-10-20",
+   "npm_monthly": 4839
+  },
+  "create-ai-memory": {
+   "stars": 3,
+   "archived": false,
+   "pushed_at": "2026-10-10",
+   "npm_monthly": 1548
+  },
+  "ctools": {
+   "stars": 9,
+   "archived": false,
+   "pushed_at": "2026-10-21"
+  },
+  "cuelo": {
+   "stars": 2,
+   "archived": false,
+   "pushed_at": "2026-10-21",
+   "npm_monthly": 13903
+  },
+  "d-ai-omp": {
+   "npm_monthly": 352
+  },
+  "devrites": {
+   "stars": 2,
+   "archived": false,
+   "pushed_at": "2026-10-21",
+   "npm_monthly": 8224
+  },
+  "dotfiles": {
+   "stars": 5,
+   "archived": false,
+   "pushed_at": "2026-09-29"
+  },
+  "dsh-better-edit": {
+   "stars": 38,
+   "archived": false,
+   "pushed_at": "2026-09-28"
+  },
+  "dsh-browser-tool": {
+   "stars": 2,
+   "archived": false,
+   "pushed_at": "2026-10-13",
+   "npm_monthly": 1276
+  },
+  "duo": {
+   "stars": 8,
+   "archived": false,
+   "pushed_at": "2026-09-19"
+  },
+  "dzhi-mempg": {
+   "stars": 0,
+   "archived": false,
+   "pushed_at": "2026-10-05",
+   "npm_monthly": 448
+  },
+  "dzhi-oomph": {
+   "stars": 0,
+   "archived": false,
+   "pushed_at": "2026-10-03",
+   "npm_monthly": 508
+  },
+  "earendil-pi": {
+   "stars": 116765,
+   "archived": false,
+   "pushed_at": "2026-10-21"
+  },
+  "ejstembler-pi-classifier-router": {
+   "npm_monthly": 1571
+  },
+  "espresso-agent-tools": {
+   "stars": 25,
+   "archived": false,
+   "pushed_at": "2026-10-17",
+   "npm_monthly": 535
+  },
+  "fabric-router-core": {
+   "stars": 116,
+   "archived": false,
+   "pushed_at": "2026-10-21"
+  },
+  "feishu-omp-bridge": {
+   "stars": 7,
+   "archived": false,
+   "pushed_at": "2026-09-11"
+  },
+  "fernado03-pi-flow": {
+   "npm_monthly": 436
+  },
+  "ferngeist": {
+   "stars": 29,
+   "archived": false,
+   "pushed_at": "2026-10-20"
+  },
+  "fish-claude": {
+   "stars": 173,
+   "archived": false,
+   "pushed_at": "2026-07-17"
+  },
+  "flosrn-ax": {
+   "stars": 0,
+   "archived": false,
+   "pushed_at": "2026-10-11",
+   "npm_monthly": 2926
+  },
+  "fork-in": {
+   "stars": 11,
+   "archived": false,
+   "pushed_at": "2026-09-11"
+  },
+  "fyeeme-pi-ask-user": {
+   "stars": 2,
+   "archived": false,
+   "pushed_at": "2026-10-17",
+   "npm_monthly": 620
+  },
+  "fyeeme-pi-peon-ping": {
+   "stars": 2,
+   "archived": false,
+   "pushed_at": "2026-10-17",
+   "npm_monthly": 436
+  },
+  "genee-omp-whip": {
+   "npm_monthly": 307
+  },
+  "getpipher-omp-statusline": {
+   "npm_monthly": 1281
+  },
+  "gooey-pi": {
+   "stars": 947,
+   "archived": false,
+   "pushed_at": "2026-10-20"
+  },
+  "gpty": {
+   "stars": 77,
+   "archived": false,
+   "pushed_at": "2026-10-21"
+  },
+  "gsd-omp": {
+   "stars": 19,
+   "archived": false,
+   "pushed_at": "2026-10-19"
+  },
+  "guanlin4924-devflow-pi": {
+   "npm_monthly": 4057
+  },
+  "harness-remote": {
+   "stars": 420,
+   "archived": false,
+   "pushed_at": "2026-10-20",
+   "npm_monthly": 883
+  },
+  "harness-summit": {
+   "stars": 0,
+   "archived": false,
+   "pushed_at": "2026-10-20",
+   "npm_monthly": 722
+  },
+  "hashes": {
+   "stars": 5,
+   "archived": false,
+   "pushed_at": "2026-10-20"
+  },
+  "hatz-provider": {
+   "stars": 0,
+   "archived": false,
+   "pushed_at": "2026-09-17",
+   "npm_monthly": 327
+  },
+  "herdr-agent-usage": {
+   "stars": 5,
+   "archived": false,
+   "pushed_at": "2026-10-20"
+  },
+  "hermes-muse-code": {
+   "stars": 5,
+   "archived": false,
+   "pushed_at": "2026-10-15"
+  },
+  "hitch": {
+   "stars": 5,
+   "archived": false,
+   "pushed_at": "2026-08-20"
+  },
+  "hy-sde-org-dsh-fs-archive": {
+   "stars": 0,
+   "archived": false,
+   "pushed_at": "2026-10-16",
+   "npm_monthly": 909
+  },
+  "hy-sde-org-dsh-hashline": {
+   "stars": 0,
+   "archived": false,
+   "pushed_at": "2026-10-16",
+   "npm_monthly": 1218
+  },
+  "hypn4-chappie": {
+   "stars": 0,
+   "archived": false,
+   "pushed_at": "2026-10-15",
+   "npm_monthly": 3408
+  },
+  "intuition-pi": {
+   "npm_monthly": 647
+  },
+  "jeopi-mnemopi": {
+   "stars": 2,
+   "archived": false,
+   "pushed_at": "2026-10-17",
+   "npm_monthly": 2308
+  },
+  "jeopi-wire": {
+   "stars": 2,
+   "archived": false,
+   "pushed_at": "2026-10-17",
+   "npm_monthly": 2290
+  },
+  "jetserge-next-prompt": {
+   "stars": 1,
+   "archived": false,
+   "pushed_at": "2026-09-23",
+   "npm_monthly": 728
+  },
+  "jev-harness-omp": {
+   "stars": 0,
+   "archived": false,
+   "pushed_at": "2026-10-20",
+   "npm_monthly": 1379
+  },
+  "jev-layer": {
+   "stars": 7,
+   "archived": false,
+   "pushed_at": "2026-10-15"
+  },
+  "jev-tools": {
+   "stars": 9,
+   "archived": false,
+   "pushed_at": "2026-10-07",
+   "npm_monthly": 1004
+  },
+  "joingonka-setup": {
+   "stars": 2,
+   "archived": false,
+   "pushed_at": "2026-09-22",
+   "npm_monthly": 450
+  },
+  "jvsteiner-agent-rules": {
+   "stars": 0,
+   "archived": false,
+   "pushed_at": "2026-10-11",
+   "npm_monthly": 664
+  },
+  "keybearer": {
+   "stars": 16,
+   "archived": false,
+   "pushed_at": "2026-06-12"
+  },
+  "kiro-discord-bot": {
+   "stars": 44,
+   "archived": false,
+   "pushed_at": "2026-10-13"
+  },
+  "kyomel-pi-omp-cc": {
+   "stars": 2,
+   "archived": false,
+   "pushed_at": "2026-10-01",
+   "npm_monthly": 848
+  },
+  "linxiraos-pi-catalog": {
+   "stars": 1,
+   "archived": false,
+   "pushed_at": "2026-10-20",
+   "npm_monthly": 3273
+  },
+  "loneexile-omp-superpowers": {
+   "stars": 0,
+   "archived": false,
+   "pushed_at": "2026-10-16",
+   "npm_monthly": 1325
+  },
+  "lucidagentide": {
+   "stars": 25,
+   "archived": false,
+   "pushed_at": "2026-10-20"
+  },
+  "magic-context": {
+   "stars": 2366,
+   "archived": false,
+   "pushed_at": "2026-10-21",
+   "npm_monthly": 11456
+  },
+  "markwylde-all-your-agents": {
+   "stars": 4,
+   "archived": false,
+   "pushed_at": "2026-10-17",
+   "npm_monthly": 2477
+  },
+  "mcowger-oh-my-pi-plexus": {
+   "stars": 2,
+   "archived": false,
+   "pushed_at": "2026-10-17",
+   "npm_monthly": 2157
+  },
+  "mcpbytes-omp-memory": {
+   "stars": 0,
+   "archived": false,
+   "pushed_at": "2026-10-02",
+   "npm_monthly": 627
+  },
+  "memorix": {
+   "stars": 853,
+   "archived": false,
+   "pushed_at": "2026-10-20"
+  },
+  "mobius": {
+   "stars": 32,
+   "archived": false,
+   "pushed_at": "2026-09-23"
+  },
+  "moonmath-ai-zro": {
+   "stars": 4,
+   "archived": false,
+   "pushed_at": "2026-10-20",
+   "npm_monthly": 1038
+  },
+  "mostcracked": {
+   "npm_monthly": 626
+  },
+  "mstar-harness": {
+   "stars": 65,
+   "archived": false,
+   "pushed_at": "2026-10-21",
+   "npm_monthly": 1071
+  },
+  "mundy-agrep": {
+   "stars": 0,
+   "archived": false,
+   "pushed_at": "2026-10-21",
+   "npm_monthly": 501
+  },
+  "my-dpsk-harness-tui": {
+   "stars": 7,
+   "archived": false,
+   "pushed_at": "2026-10-16"
+  },
+  "nevermorelove-ompp": {
+   "stars": 0,
+   "archived": false,
+   "pushed_at": "2026-09-18",
+   "npm_monthly": 339
+  },
+  "ngockhoale-ukit": {
+   "npm_monthly": 17988
+  },
+  "nibblebot-omp-web": {
+   "stars": 18,
+   "archived": false,
+   "pushed_at": "2026-10-08"
+  },
+  "nowledge-mem-omp": {
+   "stars": 193,
+   "archived": false,
+   "pushed_at": "2026-10-21",
+   "npm_monthly": 439
+  },
+  "ocpipe": {
+   "stars": 5,
+   "archived": false,
+   "pushed_at": "2026-10-21",
+   "npm_monthly": 786
+  },
+  "oh-my-claudian": {
+   "stars": 16,
+   "archived": false,
+   "pushed_at": "2026-10-21"
+  },
+  "oh-my-dsh": {
+   "stars": 33,
+   "archived": false,
+   "pushed_at": "2026-10-19"
+  },
+  "oh-my-omp-omp-config": {
+   "stars": 7,
+   "archived": false,
+   "pushed_at": "2026-10-19"
+  },
+  "oh-my-pi": {
+   "stars": 36071,
+   "archived": false,
+   "pushed_at": "2026-10-21",
+   "npm_monthly": 854265
+  },
+  "oh-my-pi-desktop": {
+   "stars": 10,
+   "archived": false,
+   "pushed_at": "2026-09-08"
+  },
+  "oh-my-pi-gui": {
+   "stars": 82,
+   "archived": false,
+   "pushed_at": "2026-10-20"
+  },
+  "oh-my-pi-po": {
+   "stars": 5,
+   "archived": false,
+   "pushed_at": "2026-05-02"
+  },
+  "oh-my-pi-ui": {
+   "stars": 8,
+   "archived": false,
+   "pushed_at": "2026-09-26"
+  },
+  "oh-my-pi-vscode": {
+   "stars": 9,
+   "archived": false,
+   "pushed_at": "2026-09-16"
+  },
+  "oh-my-pi-zh": {
+   "stars": 12,
+   "archived": false,
+   "pushed_at": "2026-10-21",
+   "npm_monthly": 42
+  },
+  "oh-my-pstack": {
+   "stars": 37,
+   "archived": false,
+   "pushed_at": "2026-09-01"
+  },
+  "ohmyjev": {
+   "stars": 2,
+   "archived": false,
+   "pushed_at": "2026-10-15",
+   "npm_monthly": 3207
+  },
+  "ohmypi-craft": {
+   "stars": 9,
+   "archived": false,
+   "pushed_at": "2026-07-17"
+  },
+  "omercnet-paseo-omp": {
+   "stars": 23,
+   "archived": false,
+   "pushed_at": "2026-10-21",
+   "npm_monthly": 15162
+  },
+  "omniroute-agent-extension": {
+   "stars": 28,
+   "archived": false,
+   "pushed_at": "2026-10-16",
+   "npm_monthly": 888
+  },
+  "omniterm": {
+   "stars": 11,
+   "archived": false,
+   "pushed_at": "2026-10-20"
+  },
+  "omp": {
+   "stars": 6,
+   "archived": false,
+   "pushed_at": "2026-10-20"
+  },
+  "omp-agenda": {
+   "stars": 2,
+   "archived": false,
+   "pushed_at": "2026-09-27",
+   "npm_monthly": 314
+  },
+  "omp-agent": {
+   "stars": 43,
+   "archived": false,
+   "pushed_at": "2026-10-18"
+  },
+  "omp-antigravity-fix-extension": {
+   "stars": 6,
+   "archived": false,
+   "pushed_at": "2026-09-13"
+  },
+  "omp-artifacts": {
+   "stars": 0,
+   "archived": false,
+   "pushed_at": "2026-10-20",
+   "npm_monthly": 1619
+  },
+  "omp-best-of": {
+   "stars": 74,
+   "archived": false,
+   "pushed_at": "2026-10-01"
+  },
+  "omp-blips": {
+   "stars": 0,
+   "archived": false,
+   "pushed_at": "2026-10-01",
+   "npm_monthly": 1251
+  },
+  "omp-claude-bridge": {
+   "stars": 8,
+   "archived": false,
+   "pushed_at": "2026-10-05"
+  },
+  "omp-cliproxyapi-provider": {
+   "stars": 2,
+   "archived": false,
+   "pushed_at": "2026-09-22",
+   "npm_monthly": 905
+  },
+  "omp-codex-remaining": {
+   "stars": 1,
+   "archived": false,
+   "pushed_at": "2026-10-10",
+   "npm_monthly": 1995
+  },
+  "omp-conductor": {
+   "npm_monthly": 430
+  },
+  "omp-config": {
+   "stars": 47,
+   "archived": false,
+   "pushed_at": "2026-06-03"
+  },
+  "omp-connect": {
+   "stars": 0,
+   "archived": false,
+   "pushed_at": "2026-09-20",
+   "npm_monthly": 387
+  },
+  "omp-council": {
+   "stars": 0,
+   "archived": false,
+   "pushed_at": "2026-10-16",
+   "npm_monthly": 662
+  },
+  "omp-cursor-sdk": {
+   "stars": 4,
+   "archived": false,
+   "pushed_at": "2026-10-03",
+   "npm_monthly": 1156
+  },
+  "omp-deck": {
+   "stars": 24,
+   "archived": false,
+   "pushed_at": "2026-05-29"
+  },
+  "omp-designer": {
+   "stars": 9,
+   "archived": false,
+   "pushed_at": "2026-08-27"
+  },
+  "omp-desktop": {
+   "stars": 11,
+   "archived": false,
+   "pushed_at": "2026-10-19"
+  },
+  "omp-desktop-apoc": {
+   "stars": 96,
+   "archived": false,
+   "pushed_at": "2026-10-19"
+  },
+  "omp-docs-cn": {
+   "stars": 3,
+   "archived": false,
+   "pushed_at": "2026-10-01"
+  },
+  "omp-episodic-memory": {
+   "stars": 5,
+   "archived": false,
+   "pushed_at": "2026-09-20",
+   "npm_monthly": 7
+  },
+  "omp-extended-search": {
+   "stars": 11,
+   "archived": false,
+   "pushed_at": "2026-09-14"
+  },
+  "omp-fabric": {
+   "stars": 9,
+   "archived": false,
+   "pushed_at": "2026-10-17",
+   "npm_monthly": 7096
+  },
+  "omp-flake": {
+   "stars": 5,
+   "archived": false,
+   "pushed_at": "2026-08-29"
+  },
+  "omp-flow": {
+   "stars": 6,
+   "archived": false,
+   "pushed_at": "2026-10-16",
+   "npm_monthly": 423
+  },
+  "omp-grok-build": {
+   "stars": 6,
+   "archived": false,
+   "pushed_at": "2026-07-17"
+  },
+  "omp-gui": {
+   "stars": 5,
+   "archived": false,
+   "pushed_at": "2026-08-23"
+  },
+  "omp-guide": {
+   "stars": 8,
+   "archived": false,
+   "pushed_at": "2026-10-19"
+  },
+  "omp-gym": {
+   "stars": 12,
+   "archived": false,
+   "pushed_at": "2026-10-20"
+  },
+  "omp-headroom": {
+   "stars": 13,
+   "archived": false,
+   "pushed_at": "2026-07-27",
+   "npm_monthly": 110
+  },
+  "omp-herdsman": {
+   "stars": 5,
+   "archived": false,
+   "pushed_at": "2026-10-12"
+  },
+  "omp-history-recall": {
+   "stars": 1,
+   "archived": false,
+   "pushed_at": "2026-09-23",
+   "npm_monthly": 1324
+  },
+  "omp-hooks-plus": {
+   "stars": 4,
+   "archived": false,
+   "pushed_at": "2026-10-12",
+   "npm_monthly": 557
+  },
+  "omp-hub-client": {
+   "stars": 0,
+   "archived": false,
+   "pushed_at": "2026-10-12",
+   "npm_monthly": 783
+  },
+  "omp-i18n-ko": {
+   "stars": 1,
+   "archived": false,
+   "pushed_at": "2026-10-16",
+   "npm_monthly": 1117
+  },
+  "omp-ide-bridge": {
+   "stars": 6,
+   "archived": false,
+   "pushed_at": "2026-10-06"
+  },
+  "omp-instances-control-plane": {
+   "stars": 5,
+   "archived": false,
+   "pushed_at": "2026-07-20"
+  },
+  "omp-jev-auto-approve": {
+   "stars": 0,
+   "archived": false,
+   "pushed_at": "2026-09-26",
+   "npm_monthly": 1024
+  },
+  "omp-launchpad": {
+   "stars": 0,
+   "archived": false,
+   "pushed_at": "2026-10-02",
+   "npm_monthly": 2227
+  },
+  "omp-laya-judge": {
+   "stars": 9,
+   "archived": false,
+   "pushed_at": "2026-09-26"
+  },
+  "omp-let-me-see": {
+   "npm_monthly": 479
+  },
+  "omp-llm-role": {
+   "stars": 1,
+   "archived": false,
+   "pushed_at": "2026-10-20",
+   "npm_monthly": 623
+  },
+  "omp-mail": {
+   "stars": 0,
+   "archived": false,
+   "pushed_at": "2026-10-16",
+   "npm_monthly": 316
+  },
+  "omp-markdown-export": {
+   "stars": 1,
+   "archived": false,
+   "pushed_at": "2026-10-03",
+   "npm_monthly": 424
+  },
+  "omp-multi-auth": {
+   "stars": 9,
+   "archived": false,
+   "pushed_at": "2026-09-29",
+   "npm_monthly": 1007
+  },
+  "omp-ninfer": {
+   "stars": 45,
+   "archived": false,
+   "pushed_at": "2026-10-18"
+  },
+  "omp-nix": {
+   "stars": 7,
+   "archived": false,
+   "pushed_at": "2026-10-21"
+  },
+  "omp-ntfy": {
+   "stars": 3,
+   "archived": false,
+   "pushed_at": "2026-10-17",
+   "npm_monthly": 430
+  },
+  "omp-nvim": {
+   "stars": 23,
+   "archived": false,
+   "pushed_at": "2026-09-24"
+  },
+  "omp-openchamber-server": {
+   "stars": 10,
+   "archived": false,
+   "pushed_at": "2026-09-23"
+  },
+  "omp-optchat": {
+   "stars": 0,
+   "archived": false,
+   "pushed_at": "2026-10-13",
+   "npm_monthly": 2827
+  },
+  "omp-oracle": {
+   "stars": 10,
+   "archived": false,
+   "pushed_at": "2026-10-20",
+   "npm_monthly": 2507
+  },
+  "omp-pi-anchored-standard": {
+   "stars": 5,
+   "archived": false,
+   "pushed_at": "2026-09-19"
+  },
+  "omp-plan-link": {
+   "npm_monthly": 333
+  },
+  "omp-prompt-autocomplete": {
+   "stars": 0,
+   "archived": false,
+   "pushed_at": "2026-10-08",
+   "npm_monthly": 521
+  },
+  "omp-provider-at-statusline": {
+   "stars": 0,
+   "archived": false,
+   "pushed_at": "2026-10-03",
+   "npm_monthly": 337
+  },
+  "omp-provider-hepai": {
+   "stars": 0,
+   "archived": false,
+   "pushed_at": "2026-09-23",
+   "npm_monthly": 532
+  },
+  "omp-provider-sub2api": {
+   "stars": 0,
+   "archived": false,
+   "pushed_at": "2026-09-23",
+   "npm_monthly": 742
+  },
+  "omp-pulse": {
+   "stars": 0,
+   "archived": false,
+   "pushed_at": "2026-10-10",
+   "npm_monthly": 1464
+  },
+  "omp-reflect": {
+   "stars": 13,
+   "archived": false,
+   "pushed_at": "2026-07-10"
+  },
+  "omp-rig": {
+   "stars": 0,
+   "archived": false,
+   "pushed_at": "2026-10-01",
+   "npm_monthly": 1083
+  },
+  "omp-sbx": {
+   "stars": 35,
+   "archived": false,
+   "pushed_at": "2026-09-08"
+  },
+  "omp-scribe": {
+   "stars": 1,
+   "archived": false,
+   "pushed_at": "2026-10-05",
+   "npm_monthly": 888
+  },
+  "omp-session-gateway": {
+   "stars": 44,
+   "archived": false,
+   "pushed_at": "2026-10-21"
+  },
+  "omp-settings-ko": {
+   "stars": 0,
+   "archived": false,
+   "pushed_at": "2026-10-01",
+   "npm_monthly": 509
+  },
+  "omp-side": {
+   "stars": 9,
+   "archived": false,
+   "pushed_at": "2026-10-12"
+  },
+  "omp-sidelight": {
+   "stars": 2,
+   "archived": false,
+   "pushed_at": "2026-10-20",
+   "npm_monthly": 315
+  },
+  "omp-skill": {
+   "stars": 7,
+   "archived": false,
+   "pushed_at": "2026-09-14"
+  },
+  "omp-skill-gate": {
+   "stars": 5,
+   "archived": false,
+   "pushed_at": "2026-10-19"
+  },
+  "omp-skilld": {
+   "stars": 1,
+   "archived": false,
+   "pushed_at": "2026-10-21",
+   "npm_monthly": 1107
+  },
+  "omp-skills": {
+   "stars": 5,
+   "archived": false,
+   "pushed_at": "2026-10-12"
+  },
+  "omp-statecompact": {
+   "stars": 11,
+   "archived": false,
+   "pushed_at": "2026-08-09"
+  },
+  "omp-studio": {
+   "stars": 12,
+   "archived": false,
+   "pushed_at": "2026-08-05"
+  },
+  "omp-sub-burndown-indicator": {
+   "stars": 6,
+   "archived": false,
+   "pushed_at": "2026-09-24"
+  },
+  "omp-sub-usage": {
+   "stars": 0,
+   "archived": false,
+   "pushed_at": "2026-09-27",
+   "npm_monthly": 354
+  },
+  "omp-telegram": {
+   "stars": 10,
+   "archived": false,
+   "pushed_at": "2026-10-21"
+  },
+  "omp-tokenmunchers": {
+   "npm_monthly": 341
+  },
+  "omp-typesafe": {
+   "stars": 1,
+   "archived": false,
+   "pushed_at": "2026-10-13",
+   "npm_monthly": 589
+  },
+  "omp-ui": {
+   "stars": 6,
+   "archived": false,
+   "pushed_at": "2026-10-21"
+  },
+  "omp-undo-redo": {
+   "stars": 21,
+   "archived": false,
+   "pushed_at": "2026-10-20",
+   "npm_monthly": 1850
+  },
+  "omp-uwu": {
+   "stars": 9,
+   "archived": false,
+   "pushed_at": "2026-10-06",
+   "npm_monthly": 1924
+  },
+  "omp-vcc": {
+   "stars": 0,
+   "archived": false,
+   "pushed_at": "2026-10-09",
+   "npm_monthly": 1676
+  },
+  "omp-web": {
+   "stars": 37,
+   "archived": false,
+   "pushed_at": "2026-08-04"
+  },
+  "omp-webdav-sync": {
+   "stars": 0,
+   "archived": false,
+   "pushed_at": "2026-09-29",
+   "npm_monthly": 347
+  },
+  "omp-wechat": {
+   "stars": 5,
+   "archived": false,
+   "pushed_at": "2026-08-23"
+  },
+  "omp-wiretap": {
+   "stars": 0,
+   "archived": false,
+   "pushed_at": "2026-09-27",
+   "npm_monthly": 353
+  },
+  "omp-workflowz": {
+   "stars": 5,
+   "archived": false,
+   "pushed_at": "2026-08-21"
+  },
+  "omp-workshop-sdk": {
+   "stars": 7,
+   "archived": false,
+   "pushed_at": "2026-10-20"
+  },
+  "ompchamber": {
+   "stars": 14,
+   "archived": true,
+   "pushed_at": "2026-10-20",
+   "npm_monthly": 11971
+  },
+  "ompcode": {
+   "stars": 10,
+   "archived": false,
+   "pushed_at": "2026-10-21"
+  },
+  "omperator": {
+   "stars": 14,
+   "archived": false,
+   "pushed_at": "2026-10-18"
+  },
+  "omperor": {
+   "stars": 8,
+   "archived": false,
+   "pushed_at": "2026-10-14"
+  },
+  "ompgui": {
+   "stars": 9,
+   "archived": false,
+   "pushed_at": "2026-10-09",
+   "npm_monthly": 848
+  },
+  "omploom": {
+   "stars": 1,
+   "archived": false,
+   "pushed_at": "2026-09-24",
+   "npm_monthly": 419
+  },
+  "ompup": {
+   "stars": 8,
+   "archived": false,
+   "pushed_at": "2026-09-18"
+  },
+  "ompweb": {
+   "stars": 356,
+   "archived": false,
+   "pushed_at": "2026-10-20",
+   "npm_monthly": 2589
+  },
+  "openadapter-koda-hashline": {
+   "npm_monthly": 403
+  },
+  "opencode-compat-pi-bridge": {
+   "stars": 10,
+   "archived": false,
+   "pushed_at": "2026-10-07",
+   "npm_monthly": 506
+  },
+  "opencode2pi": {
+   "stars": 0,
+   "archived": false,
+   "pushed_at": "2026-10-21",
+   "npm_monthly": 1343
+  },
+  "opencode2pi-cli": {
+   "stars": 0,
+   "archived": false,
+   "pushed_at": "2026-10-21",
+   "npm_monthly": 514
+  },
+  "paper-share-skills": {
+   "stars": 45,
+   "archived": false,
+   "pushed_at": "2026-08-12"
+  },
+  "paperclip-omp-adapter": {
+   "stars": 5,
+   "archived": false,
+   "pushed_at": "2026-09-24"
+  },
+  "paseo-btw": {
+   "npm_monthly": 356
+  },
+  "paseo-github-workbench": {
+   "stars": 6,
+   "archived": false,
+   "pushed_at": "2026-09-04"
+  },
+  "pavans-workflow": {
+   "stars": 17,
+   "archived": false,
+   "pushed_at": "2026-10-19"
+  },
+  "phi": {
+   "stars": 616,
+   "archived": false,
+   "pushed_at": "2026-10-20"
+  },
+  "pi-advisor": {
+   "stars": 6,
+   "archived": false,
+   "pushed_at": "2026-10-14"
+  },
+  "pi-agent-substrate": {
+   "stars": 10,
+   "archived": false,
+   "pushed_at": "2026-09-21"
+  },
+  "pi-automode": {
+   "stars": 195,
+   "archived": false,
+   "pushed_at": "2026-09-25"
+  },
+  "pi-background-run": {
+   "stars": 3,
+   "archived": false,
+   "pushed_at": "2026-09-29",
+   "npm_monthly": 865
+  },
+  "pi-captains-log": {
+   "stars": 0,
+   "archived": false,
+   "pushed_at": "2026-10-20",
+   "npm_monthly": 659
+  },
+  "pi-cliffcompaction": {
+   "stars": 9,
+   "archived": false,
+   "pushed_at": "2026-10-08",
+   "npm_monthly": 405
+  },
+  "pi-context-broker": {
+   "stars": 3,
+   "archived": false,
+   "pushed_at": "2026-10-14",
+   "npm_monthly": 475
+  },
+  "pi-context-plus": {
+   "stars": 5,
+   "archived": false,
+   "pushed_at": "2026-07-31"
+  },
+  "pi-deferred-context-engine": {
+   "stars": 9,
+   "archived": false,
+   "pushed_at": "2026-10-08",
+   "npm_monthly": 528
+  },
+  "pi-desktop-faq": {
+   "stars": 330,
+   "archived": false,
+   "pushed_at": "2026-10-20"
+  },
+  "pi-diagram": {
+   "stars": 7,
+   "archived": false,
+   "pushed_at": "2026-10-09",
+   "npm_monthly": 516
+  },
+  "pi-experiences": {
+   "stars": 4,
+   "archived": false,
+   "pushed_at": "2026-09-09",
+   "npm_monthly": 669
+  },
+  "pi-freeflow": {
+   "stars": 94,
+   "archived": false,
+   "pushed_at": "2026-10-21",
+   "npm_monthly": 8204
+  },
+  "pi-handoff": {
+   "stars": 23,
+   "archived": false,
+   "pushed_at": "2026-10-15"
+  },
+  "pi-harness-course": {
+   "stars": 0,
+   "archived": false,
+   "pushed_at": "2026-10-16"
+  },
+  "pi-hunk": {
+   "stars": 3,
+   "archived": false,
+   "pushed_at": "2026-09-28",
+   "npm_monthly": 346
+  },
+  "pi-jev-find": {
+   "stars": 0,
+   "archived": false,
+   "pushed_at": "2026-09-22",
+   "npm_monthly": 566
+  },
+  "pi-knowledge": {
+   "stars": 28,
+   "archived": false,
+   "pushed_at": "2026-10-19",
+   "npm_monthly": 1778
+  },
+  "pi-omniroute-sync": {
+   "stars": 6,
+   "archived": false,
+   "pushed_at": "2026-09-29",
+   "npm_monthly": 805
+  },
+  "pi-omp-advisor": {
+   "stars": 1,
+   "archived": false,
+   "pushed_at": "2026-10-15",
+   "npm_monthly": 1577
+  },
+  "pi-omp-theme": {
+   "stars": 14,
+   "archived": false,
+   "pushed_at": "2026-10-12",
+   "npm_monthly": 3459
+  },
+  "pi-omplike-advisor": {
+   "stars": 112,
+   "archived": false,
+   "pushed_at": "2026-10-13"
+  },
+  "pi-opencode-fix": {
+   "stars": 14,
+   "archived": false,
+   "pushed_at": "2026-09-18"
+  },
+  "pi-opencode-go-usage": {
+   "stars": 3,
+   "archived": false,
+   "pushed_at": "2026-09-20",
+   "npm_monthly": 394
+  },
+  "pi-output-styles": {
+   "stars": 7,
+   "archived": false,
+   "pushed_at": "2026-10-03",
+   "npm_monthly": 827
+  },
+  "pi-provider-factory": {
+   "stars": 6,
+   "archived": false,
+   "pushed_at": "2026-08-06"
+  },
+  "pi-qwen-dashscope": {
+   "stars": 0,
+   "archived": false,
+   "pushed_at": "2026-08-21",
+   "npm_monthly": 5261
+  },
+  "pi-sub-anthropic": {
+   "stars": 8,
+   "archived": false,
+   "pushed_at": "2026-10-01",
+   "npm_monthly": 1172
+  },
+  "pi-supernova": {
+   "stars": 9,
+   "archived": false,
+   "pushed_at": "2026-10-08",
+   "npm_monthly": 1917
+  },
+  "pi-surplus": {
+   "stars": 1,
+   "archived": false,
+   "pushed_at": "2026-10-02",
+   "npm_monthly": 719
+  },
+  "pi-web-access": {
+   "stars": 1663,
+   "archived": false,
+   "pushed_at": "2026-10-21",
+   "npm_monthly": 792787
+  },
+  "pi-yaml-hooks": {
+   "stars": 17,
+   "archived": false,
+   "pushed_at": "2026-09-26",
+   "npm_monthly": 3428
+  },
+  "pi-zentui": {
+   "stars": 112,
+   "archived": false,
+   "pushed_at": "2026-10-20",
+   "npm_monthly": 14217
+  },
+  "pickforge-pickcheck": {
+   "stars": 0,
+   "archived": false,
+   "pushed_at": "2026-09-30",
+   "npm_monthly": 339
+  },
+  "pinkcollab": {
+   "stars": 11,
+   "archived": false,
+   "pushed_at": "2026-10-18"
+  },
+  "pivot": {
+   "stars": 68,
+   "archived": false,
+   "pushed_at": "2026-08-18"
+  },
+  "pk-nerdsaver-ai-pi-catalog": {
+   "stars": 1,
+   "archived": false,
+   "pushed_at": "2026-10-20",
+   "npm_monthly": 595
+  },
+  "pk-nerdsaver-ai-pi-mnemopi": {
+   "stars": 1,
+   "archived": false,
+   "pushed_at": "2026-10-20",
+   "npm_monthly": 439
+  },
+  "pk-nerdsaver-ai-pi-wire": {
+   "stars": 1,
+   "archived": false,
+   "pushed_at": "2026-10-20",
+   "npm_monthly": 591
+  },
+  "po1nt9-omp-web": {
+   "stars": 11,
+   "archived": false,
+   "pushed_at": "2026-07-27"
+  },
+  "polderlabs-bizar-omp": {
+   "npm_monthly": 6112
+  },
+  "ponytail-on-stimulants": {
+   "stars": 0,
+   "archived": false,
+   "pushed_at": "2026-10-18",
+   "npm_monthly": 567
+  },
+  "proofpunk": {
+   "stars": 5,
+   "archived": false,
+   "pushed_at": "2026-09-14"
+  },
+  "pstack-omp": {
+   "stars": 8,
+   "archived": false,
+   "pushed_at": "2026-10-15"
+  },
+  "q-skill": {
+   "npm_monthly": 534
+  },
+  "q5m-ai-cli": {
+   "npm_monthly": 305
+  },
+  "qwenproxy": {
+   "stars": 33,
+   "archived": false,
+   "pushed_at": "2026-10-20"
+  },
+  "r1z4x-tezgah": {
+   "npm_monthly": 6143
+  },
+  "ramarivera-pi-claude-cli": {
+   "stars": 1,
+   "archived": false,
+   "pushed_at": "2026-10-13",
+   "npm_monthly": 973
+  },
+  "relace-compact-pi": {
+   "stars": 3,
+   "archived": false,
+   "pushed_at": "2026-09-29",
+   "npm_monthly": 438
+  },
+  "research-workflow": {
+   "stars": 0,
+   "archived": false,
+   "pushed_at": "2026-10-07",
+   "npm_monthly": 1089
+  },
+  "resume-claude-codex-grok": {
+   "stars": 11,
+   "archived": false,
+   "pushed_at": "2026-08-29"
+  },
+  "retaw106-mmc-pi": {
+   "npm_monthly": 1983
+  },
+  "rizquuula-paperclip-omp-adapter": {
+   "stars": 0,
+   "archived": false,
+   "pushed_at": "2026-09-25",
+   "npm_monthly": 660
+  },
+  "ryanskidmore-tokenomics": {
+   "npm_monthly": 487
+  },
+  "sangyaahub-pi-marg": {
+   "stars": 2,
+   "archived": false,
+   "pushed_at": "2026-10-03",
+   "npm_monthly": 843
+  },
+  "seanmozeik-tripwire": {
+   "stars": 1,
+   "archived": false,
+   "pushed_at": "2026-10-19",
+   "npm_monthly": 342
+  },
+  "seekanchor": {
+   "stars": 18,
+   "archived": false,
+   "pushed_at": "2026-10-13"
+  },
+  "sencha930511-pi-model-sync": {
+   "stars": 0,
+   "archived": false,
+   "pushed_at": "2026-10-20",
+   "npm_monthly": 356
+  },
+  "shaftoe-awesome-pi-coding-agent": {
+   "stars": 161,
+   "archived": false,
+   "pushed_at": "2026-10-21"
+  },
+  "shaleme": {
+   "stars": 6,
+   "archived": false,
+   "pushed_at": "2026-10-07",
+   "npm_monthly": 653
+  },
+  "shepherd": {
+   "stars": 6,
+   "archived": false,
+   "pushed_at": "2026-10-16"
+  },
+  "sideren": {
+   "stars": 1,
+   "archived": false,
+   "pushed_at": "2026-08-18",
+   "npm_monthly": 555
+  },
+  "sift-light": {
+   "stars": 99,
+   "archived": false,
+   "pushed_at": "2026-10-14",
+   "npm_monthly": 2785
+  },
+  "signetai-connector-oh-my-pi": {
+   "stars": 310,
+   "archived": false,
+   "pushed_at": "2026-10-19",
+   "npm_monthly": 11018
+  },
+  "sjawhar-pi-envoy": {
+   "stars": 4,
+   "archived": false,
+   "pushed_at": "2026-10-21",
+   "npm_monthly": 7863
+  },
+  "sjawhar-pi-legion": {
+   "stars": 4,
+   "archived": false,
+   "pushed_at": "2026-10-21",
+   "npm_monthly": 9951
+  },
+  "sjawhar-pi-legion-envoy": {
+   "stars": 4,
+   "archived": false,
+   "pushed_at": "2026-10-21",
+   "npm_monthly": 40978
+  },
+  "skills": {
+   "stars": 67,
+   "archived": false,
+   "pushed_at": "2026-10-20"
+  },
+  "smart-approve": {
+   "npm_monthly": 556
+  },
+  "sonsong-prompt-coach": {
+   "stars": 1,
+   "archived": false,
+   "pushed_at": "2026-09-30",
+   "npm_monthly": 450
+  },
+  "speak-like-you-eat": {
+   "stars": 113,
+   "archived": false,
+   "pushed_at": "2026-10-20",
+   "npm_monthly": 770
+  },
+  "stablekernel-pi-background-run": {
+   "stars": 3,
+   "archived": false,
+   "pushed_at": "2026-09-29",
+   "npm_monthly": 736
+  },
+  "stupid-comments": {
+   "stars": 1,
+   "archived": false,
+   "pushed_at": "2026-10-15",
+   "npm_monthly": 369
+  },
+  "stuplum-volit": {
+   "stars": 0,
+   "archived": false,
+   "pushed_at": "2026-10-03",
+   "npm_monthly": 341
+  },
+  "super-dsh": {
+   "npm_monthly": 5051
+  },
+  "superdev2347832-agent-bridge": {
+   "stars": 1,
+   "archived": false,
+   "pushed_at": "2026-09-27",
+   "npm_monthly": 427
+  },
+  "supipowers": {
+   "stars": 12,
+   "archived": true,
+   "pushed_at": "2026-05-30",
+   "npm_monthly": 433
+  },
+  "swayrouter": {
+   "stars": 10,
+   "archived": false,
+   "pushed_at": "2026-10-20"
+  },
+  "tackbox": {
+   "stars": 0,
+   "archived": false,
+   "pushed_at": "2026-10-20",
+   "npm_monthly": 742
+  },
+  "taoeffects-omp": {
+   "stars": 1,
+   "archived": false,
+   "pushed_at": "2026-10-17",
+   "npm_monthly": 980
+  },
+  "tarileo-artifact-omp": {
+   "npm_monthly": 1334
+  },
+  "telemetry-dev-omp": {
+   "stars": 33,
+   "archived": false,
+   "pushed_at": "2026-10-19",
+   "npm_monthly": 537
+  },
+  "tern-agent-scheduler": {
+   "stars": 18,
+   "archived": false,
+   "pushed_at": "2026-10-17"
+  },
+  "tern-projects": {
+   "stars": 8,
+   "archived": false,
+   "pushed_at": "2026-10-16"
+  },
+  "tersio": {
+   "stars": 16,
+   "archived": false,
+   "pushed_at": "2026-10-18"
+  },
+  "thealtoclef-pi-openviking": {
+   "npm_monthly": 474
+  },
+  "theruansilva-omp-web": {
+   "stars": 4,
+   "archived": false,
+   "pushed_at": "2026-10-19",
+   "npm_monthly": 785
+  },
+  "thevibeworks-awesome-pi-agent": {
+   "stars": 4,
+   "archived": false,
+   "pushed_at": "2026-10-17"
+  },
+  "threadlens": {
+   "stars": 12,
+   "archived": false,
+   "pushed_at": "2026-07-24"
+  },
+  "tickernelz-dinotty-omp": {
+   "stars": 0,
+   "archived": false,
+   "pushed_at": "2026-10-19",
+   "npm_monthly": 530
+  },
+  "tickernelz-omp-telegram": {
+   "stars": 5,
+   "archived": false,
+   "pushed_at": "2026-09-26",
+   "npm_monthly": 2953
+  },
+  "tinfoilsh-omp-provider": {
+   "stars": 1,
+   "archived": false,
+   "pushed_at": "2026-10-01",
+   "npm_monthly": 479
+  },
+  "tokens-gone": {
+   "stars": 4,
+   "archived": false,
+   "pushed_at": "2026-10-01",
+   "npm_monthly": 465
+  },
+  "tokscale": {
+   "stars": 5713,
+   "archived": false,
+   "pushed_at": "2026-10-20",
+   "npm_monthly": 180721
+  },
+  "tokscale-cli": {
+   "stars": 5713,
+   "archived": false,
+   "pushed_at": "2026-10-20",
+   "npm_monthly": 181423
+  },
+  "tommasomarchionni-omp-usage": {
+   "stars": 0,
+   "archived": false,
+   "pushed_at": "2026-10-19",
+   "npm_monthly": 1198
+  },
+  "tommasomarchionni-omp-usage-exporter": {
+   "stars": 0,
+   "archived": false,
+   "pushed_at": "2026-10-19",
+   "npm_monthly": 768
+  },
+  "tt1bt-oh-my-pi-zh": {
+   "stars": 9,
+   "archived": false,
+   "pushed_at": "2026-09-22",
+   "npm_monthly": 488
+  },
+  "underactive-pi-topping-statusline": {
+   "stars": 1,
+   "archived": false,
+   "pushed_at": "2026-10-19",
+   "npm_monthly": 1680
+  },
+  "unkeyn-oh-my-pi-gui": {
+   "stars": 20,
+   "archived": false,
+   "pushed_at": "2026-08-16"
+  },
+  "valorbrain-connect": {
+   "stars": 0,
+   "archived": false,
+   "pushed_at": "2026-10-20",
+   "npm_monthly": 2516
+  },
+  "vanillagreen-pi-extension-manager": {
+   "stars": 85,
+   "archived": false,
+   "pushed_at": "2026-10-21",
+   "npm_monthly": 1361
+  },
+  "vepando-switchyard": {
+   "stars": 7,
+   "archived": false,
+   "pushed_at": "2026-09-21",
+   "npm_monthly": 893
+  },
+  "vespi": {
+   "stars": 13,
+   "archived": false,
+   "pushed_at": "2026-09-27"
+  },
+  "veyyon": {
+   "stars": 28,
+   "archived": false,
+   "pushed_at": "2026-10-20"
+  },
+  "visomp": {
+   "stars": 6,
+   "archived": false,
+   "pushed_at": "2026-10-01"
+  },
+  "vmark-omp-extension": {
+   "npm_monthly": 348
+  },
+  "warp-relay-pool": {
+   "stars": 14,
+   "archived": false,
+   "pushed_at": "2026-10-16"
+  },
+  "wows-omp-plugins": {
+   "stars": 5,
+   "archived": false,
+   "pushed_at": "2026-10-16"
+  },
+  "wxyhgk-oh-my-pi-zh": {
+   "stars": 13,
+   "archived": false,
+   "pushed_at": "2026-08-05",
+   "npm_monthly": 31
+  },
+  "xdev": {
+   "stars": 5,
+   "archived": false,
+   "pushed_at": "2026-10-21"
+  },
+  "xiaoso-dsh-tool-plus": {
+   "stars": 11,
+   "archived": false,
+   "pushed_at": "2026-10-21",
+   "npm_monthly": 2723
+  },
+  "zcode-agent-kit": {
+   "stars": 80,
+   "archived": false,
+   "pushed_at": "2026-10-03",
+   "npm_monthly": 6261
+  }
+ }
+}

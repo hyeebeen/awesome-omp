@@ -1,0 +1,49 @@
+# Weekly REPORT-ONLY recheck: new omp release, archived/renamed/stale repos,
+# omp evidence disappearing. Never commits; a human edits data/.
+name: Weekly recheck
+on:
+  schedule:
+    - cron: '0 1 * * 1' # Mondays 01:00 UTC = 09:00 Asia/Shanghai
+  workflow_dispatch:
+permissions:
+  contents: read
+  issues: write
+jobs:
+  recheck:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.13'
+      - run: pip install pyyaml jsonschema
+      - id: recheck
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set +e
+          python3 scripts/recheck.py --out recheck.md --fail-on-change
+          code=$?
+          set -e
+          echo "exit_code=$code" >> "$GITHUB_OUTPUT"
+          if [ "$code" -ne 0 ] && [ "$code" -ne 2 ]; then exit "$code"; fi
+      - id: existing
+        if: steps.recheck.outputs.exit_code == '2'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          num="$(gh api "repos/${GITHUB_REPOSITORY}/issues?labels=recheck&state=open&per_page=100" \
+            --jq '[.[] | select(.title == "Weekly recheck") | .number] | first // ""')"
+          echo "number=$num" >> "$GITHUB_OUTPUT"
+      - if: steps.recheck.outputs.exit_code == '2'
+        uses: peter-evans/create-issue-from-file@v6
+        with:
+          title: Weekly recheck
+          content-filepath: recheck.md
+          labels: recheck
+          issue-number: ${{ steps.existing.outputs.number }}
+      - if: always()
+        uses: actions/upload-artifact@v7
+        with:
+          name: recheck-report
+          path: recheck.md

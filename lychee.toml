@@ -1,0 +1,14 @@
+# lychee config — weekly workflow and local runs:
+#   lychee --config lychee.toml --no-progress '**/*.md' 'data/*.yml'
+accept = ["200", "206", "429"]
+max_concurrency = 8
+exclude = [
+  "^https?://([^/]+\\.)?x\\.com/",
+  "^https?://([^/]+\\.)?twitter\\.com/",
+  "^https?://localhost",
+  "^https?://127\\.0\\.0\\.1",
+  "^https://api\\.github\\.com/",
+  # links into this repo resolve only after the first push
+  "^https://github\\.com/hyeebeen/awesome-omp",
+]
+exclude_path = ["research/raw"]
